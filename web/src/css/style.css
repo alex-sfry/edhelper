@@ -1,0 +1,302 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+/* purgecss start ignore */
+.agriculture-shadow {
+  box-shadow: #4caf50 0px 50px 100px -20px, #4caf50 0px 30px 60px -30px, #4caf50 0px -2px 6px 0px inset;
+}
+
+.colony-shadow {
+  box-shadow: #ffc107 0px 50px 100px -20px, #ffc107 0px 30px 60px -30px, #ffc107 0px -2px 6px 0px inset;
+}
+
+.extraction-shadow {
+  box-shadow: #9e9e9e 0px 50px 100px -20px, #9e9e9e 0px 30px 60px -30px, #9e9e9e 0px -2px 6px 0px inset;
+}
+
+.high-tech-shadow {
+  box-shadow: #03a9f4 0px 50px 100px -20px, #03a9f4 0px 30px 60px -30px, #03a9f4 0px -2px 6px 0px inset;
+}
+
+.industrial-shadow {
+  box-shadow: #ff5722 0px 50px 100px -20px, #ff5722 0px 30px 60px -30px, #ff5722 0px -2px 6px 0px inset;
+}
+
+.military-shadow {
+  box-shadow: #f44336 0px 50px 100px -20px, #f44336 0px 30px 60px -30px, #f44336 0px -2px 6px 0px inset;
+}
+
+.refinery-shadow {
+  box-shadow: #795548 0px 50px 100px -20px, #795548 0px 30px 60px -30px, #795548 0px -2px 6px 0px inset;
+}
+
+.service-shadow {
+  box-shadow: #9c27b0 0px 50px 100px -20px, #9c27b0 0px 30px 60px -30px, #9c27b0 0px -2px 6px 0px inset;
+}
+
+.terraforming-shadow {
+  box-shadow: #00bcd4 0px 50px 100px -20px, #00bcd4 0px 30px 60px -30px, #00bcd4 0px -2px 6px 0px inset;
+}
+
+.tourism-shadow {
+  box-shadow: #ffeb3b 0px 50px 100px -20px, #ffeb3b 0px 30px 60px -30px, #ffeb3b 0px -2px 6px 0px inset;
+}
+
+.prison-shadow {
+  box-shadow: #607d8b 0px 50px 100px -20px, #607d8b 0px 30px 60px -30px, #607d8b 0px -2px 6px 0px inset;
+}
+
+.damaged-shadow {
+  box-shadow: #d32f2f 0px 50px 100px -20px, #d32f2f 0px 30px 60px -30px, #d32f2f 0px -2px 6px 0px inset;
+}
+
+.rescue-shadow {
+  box-shadow: #ff9800 0px 50px 100px -20px, #ff9800 0px 30px 60px -30px, #ff9800 0px -2px 6px 0px inset;
+}
+
+.repair-shadow {
+  box-shadow: #8bc34a 0px 50px 100px -20px, #8bc34a 0px 30px 60px -30px, #8bc34a 0px -2px 6px 0px inset;
+}
+
+.engineering-shadow {
+  box-shadow: #2196f3 0px 50px 100px -20px, #2196f3 0px 30px 60px -30px, #2196f3 0px -2px 6px 0px inset;
+}
+
+.text-agriculture {
+  color: #4caf50;
+}
+
+.text-colony {
+  color: #ffc107;
+}
+
+.text-extraction {
+  color: #9e9e9e;
+}
+
+.text-high-tech {
+  color: #03a9f4;
+}
+
+.text-industrial {
+  color: #ff5722;
+}
+
+.text-military {
+  color: #f44336;
+}
+
+.text-refinery {
+  color: #795548;
+}
+
+.text-service {
+  color: #9c27b0;
+}
+
+.text-terraforming {
+  color: #00bcd4;
+}
+
+.text-tourism {
+  color: #ffeb3b;
+}
+
+.text-prison {
+  color: #607d8b;
+}
+
+.text-damaged {
+  color: #d32f2f;
+}
+
+.text-rescue {
+  color: #ff9800;
+}
+
+.text-repair {
+  color: #8bc34a;
+}
+
+.text-engineering {
+  color: #2196f3;
+}
+
+/* purgecss end ignore */
+/* purgecss start ignore */
+[data-bs-theme=dark] table {
+  --bs-table-color: #dee2e6 !important;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.btn {
+  --bs-btn-font-family: "Roboto", sans-serif;
+}
+
+.lsp-01 {
+  letter-spacing: 0.1rem;
+}
+
+.t-tip {
+  cursor: help;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.text-gray-900, .ui-menu .dd-list-item:hover {
+  color: #212529 !important;
+}
+
+.bg-gray-300, .ui-menu .dd-list-item:hover {
+  background-color: #dee2e6 !important;
+}
+
+.bg-gray-900, form[data-bs-theme=dark] {
+  background-color: #212529 !important;
+}
+
+.bg-layout {
+  background-color: #370665 !important;
+}
+
+.bg-main {
+  background-color: #35589A !important;
+}
+
+.edh-header .nav-link {
+  --bs-nav-link-color: #dee2e6;
+  --bs-nav-link-hover-color: #6edff6;
+}
+.edh-header .nav-link.active {
+  --bs-navbar-active-color: #0dcaf0;
+}
+
+.tabs-dark {
+  --bs-nav-link-color: #9eeaf9;
+  --bs-border-color: #6c757d;
+}
+
+.shadow-in-wh {
+  box-shadow: #fff 0px 50px 100px -20px, #fff 0px 30px 60px -30px, #fff 0px -2px 6px 0px inset;
+}
+
+.shadow-in-primary {
+  box-shadow: #0d6efd 0px 50px 100px -20px, #0d6efd 0px 30px 60px -30px, #0d6efd 0px -2px 6px 0px inset;
+}
+
+h3.import-export::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #dee2e6;
+}
+
+.form-control[data-bs-theme=dark],
+.input-group[data-bs-theme=dark],
+.form-select[data-bs-theme=dark] {
+  --bs-border-color: #adb5bd;
+}
+
+a.asc:after,
+a.desc:after {
+  content: "";
+  left: 3px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: solid 5px transparent;
+  margin: 4px 4px 2px 4px;
+  background: transparent;
+}
+
+a.asc:after {
+  border-bottom: solid 7px #212529;
+  border-top-width: 0;
+}
+
+a.desc:after {
+  border-top: solid 7px #212529;
+  border-bottom-width: 0;
+}
+
+table[data-bs-theme=dark] {
+  --bs-table-striped-color: $gray-300 !important;
+  --bs-table-color: $gray-300 !important;
+}
+table[data-bs-theme=dark] a.asc:after {
+  border-bottom: solid 7px #dee2e6;
+  border-top-width: 0;
+}
+table[data-bs-theme=dark] a.desc:after {
+  border-top: solid 7px #dee2e6;
+  border-bottom-width: 0;
+}
+
+.grid-view th {
+  white-space: nowrap;
+}
+
+.hint-block {
+  display: block;
+  margin-top: 5px;
+  color: #999;
+}
+
+.error-summary {
+  color: #a94442;
+  background: #fdf7f7;
+  border-left: 3px solid #eed3d7;
+  padding: 10px 20px;
+  margin: 0 0 15px 0;
+}
+
+#filter-btn {
+  min-width: 4.5rem;
+}
+
+.ui-menu.dropdown-menu {
+  max-height: calc(19rem + 12px);
+}
+
+.ui-menu {
+  padding: 0.5rem;
+}
+.ui-menu .dd-list-item:hover {
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.ui-menu .dd-list-item .ui-state-focus,
+.ui-menu .dd-list-item .ui-state-active {
+  margin: 0;
+}
+
+.spinner {
+  margin-bottom: 10px;
+  margin-left: -22px;
+}
+
+/* purgecss end ignore */

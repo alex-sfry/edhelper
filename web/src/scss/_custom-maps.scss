@@ -1,0 +1,31 @@
+$economy-colors: (
+    Agriculture: #4caf50,
+    Colony: #ffc107,
+    Extraction: #9e9e9e,
+    High-Tech: #03a9f4,
+    Industrial: #ff5722,
+    Military: #f44336,
+    Refinery: #795548,
+    Service: #9c27b0,
+    Terraforming: #00bcd4,
+    Tourism: #ffeb3b,
+    Prison: #607d8b,
+    Damaged: #d32f2f,
+    Rescue: #ff9800,
+    Repair: #8bc34a,
+    Engineering: #2196f3,
+);
+
+/* purgecss start ignore */
+@each $economy, $color in $economy-colors {
+    .#{to-lower-case($economy)}-shadow {
+        box-shadow: $color 0px 50px 100px -20px, $color 0px 30px 60px -30px, $color 0px -2px 6px 0px inset;
+    }
+}
+
+@each $economy, $color in $economy-colors {
+    .text-#{to-lower-case($economy)} {
+        color: $color;
+    }
+}
+/* purgecss end ignore */

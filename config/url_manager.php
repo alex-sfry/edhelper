@@ -1,0 +1,23 @@
+<?php
+
+return [
+    'enablePrettyUrl' => true,
+    'showScriptName' => false,
+    'enableStrictParsing' => true,
+    'suffix' => '/',
+    'rules' => [
+        'search' => 'search/index',
+        'material-traders' => 'material-traders/index',
+        'stations' => 'stations/index',
+        'engineers' => 'engineers/index',
+        'trading/<slug:\w+>' => 'trading/index',
+        'ecomomies' => 'ecomomies/index',
+        // 'site/contact' => 'site/contact',
+        // 'site/signup' => 'site/signup',
+        // 'site/login' => 'site/login',
+        // 'site/logout' => 'site/logout',
+        // '<action:(captcha)>'  => 'site/<action>',
+        // '<controller>/<action>' =>  '<controller>/<action>',
+        '' => 'site/index'
+    ],
+];
