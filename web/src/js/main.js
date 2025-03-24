@@ -1,5 +1,4 @@
 // import './bootstrapJS/bootstrap.js';
-import { ddInput } from './idd.js';
 
 function columnFilter(inputSelector, tableId) {
     const input = $(inputSelector);
