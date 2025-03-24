@@ -8,6 +8,9 @@ use yii\web\Controller;
 
 class MaterialTradersController extends Controller
 {
+    /**
+     * @return string
+     */
     public function actionIndex()
     {
         $session = Yii::$app->session;
@@ -21,12 +24,13 @@ class MaterialTradersController extends Controller
         }
 
         $dataProvider = $searchModel->search();
+        $models = $dataProvider->getModels();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'sort' => $dataProvider->getSort(),
             'pagination' => $dataProvider->getPagination(),
-            'models' => $dataProvider->getModels()
+            'models' => $models
         ]);
     }
 }
