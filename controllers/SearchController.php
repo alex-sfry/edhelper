@@ -61,10 +61,11 @@ class SearchController extends \yii\web\Controller
     private function findStation($stationName)
     {
         $stations = Stations::find()
-            ->select(['id', 'name'])
+            ->select('name AS value')
             ->where(
                 new \yii\db\Expression('name LIKE :st_name', [':st_name' => $stationName . '%'])
             )
+            ->asArray()
             ->all();
         $this->result = $stations;
     }
