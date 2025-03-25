@@ -25,7 +25,7 @@ class SearchController extends \yii\web\Controller
         $term = Yii::$app->request->get('term');
 
         if (empty($cat) || empty($term)) {
-            throw new InvalidArgumentException('required parasm are missing (cat, term)');
+            throw new InvalidArgumentException('required params are missing (cat, term)');
         }
 
         $cat === 'system' && $this->findSystem($term);
