@@ -49,7 +49,7 @@ AutocompleteAsset::register($this);
                                                 $searchModel,
                                                 'refSystem',
                                                 [
-                                                    'options' => ['class' => 'mb-0'],
+                                                    'options' => ['class' => 'mb-3 w-100'],
                                                     'labelOptions' => ['class' => 'form-label']
                                                 ]
                                             )
@@ -61,7 +61,6 @@ AutocompleteAsset::register($this);
                                             role="status">
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">

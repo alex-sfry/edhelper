@@ -10,9 +10,9 @@ use yii\bootstrap5\LinkPager;
 $th = [
     ['label' => 'material type'],
     ['label' => 'station'],
-    ['label' => 'distance to arrival (LS)'],
+    ['label' => 'distance to arrival (ls)'],
     ['label' => 'system'],
-    ['label' => "distance from {$searchModel->refSystem} (LY)"]
+    ['label' => "distance from {$searchModel->refSystem} (ly)"]
 ];
 $formatter = Yii::$app->formatter;
 $formatter->thousandSeparator = ' ';
