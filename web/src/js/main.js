@@ -57,23 +57,28 @@ $.widget("custom.bsAutocomplete", $.ui.autocomplete, {
 });
 // end of custom jQuery Autocomplete widget
 
-$("#materialtraderssearch-refsystem").bsAutocomplete({
-    source: "/search/?cat=system",
-    minLength: 3,
-    delay: 1000,
-    focus: function (event, ui) {
-        this.value = ui.item.label; // or $('#autocomplete-input').val(ui.item.label);
-        event.preventDefault(); // Prevent the default focus behavior.
-    },
-    select: function (event, ui) {
-        this.value = ui.item.label;
-        $("#materialtraderssearch-refsystemid").val(ui.item.value);
-        event.preventDefault();
-    },
-    search: function (event, ui) { 
-        $('.spinner').removeClass('visually-hidden');
-    },
-    response: function (event, ui) {
-        $('.spinner').addClass('visually-hidden');
+function acCfg(cat, inpId) {
+    return {
+        source: `/search/?cat=${cat}`,
+        minLength: 3,
+        delay: 1000,
+        focus: function (event, ui) {
+            this.value = ui.item.label; // or $('#autocomplete-input').val(ui.item.label);
+            event.preventDefault(); // Prevent the default focus behavior.
+        },
+        select: function (event, ui) {
+            this.value = ui.item.label;
+            $(`#${inpId}`).val(ui.item.value);
+            event.preventDefault();
+        },
+        search: function (event, ui) { 
+            $('.spinner').removeClass('visually-hidden');
+        },
+        response: function (event, ui) {
+            $('.spinner').addClass('visually-hidden');
+        }
     }
-});
+}
+
+$("#materialtraderssearch-refsystem").bsAutocomplete(acCfg('system', 'materialtraderssearch-refsystem'));
+$("#stationssearch-refsystem").bsAutocomplete(acCfg('system', 'materialtraderssearch-refsystem'));
