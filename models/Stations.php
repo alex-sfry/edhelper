@@ -31,6 +31,8 @@ class Stations extends \yii\db\ActiveRecord
     private $surface;
     /** @var float */
     public $distanceFromRef;
+    /** @var mixed */
+    public $value;
 
     /**
      * {@inheritdoc}

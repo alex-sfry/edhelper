@@ -8,16 +8,14 @@
 
 use yii\bootstrap5\LinkPager;
 
-// echo $form->refSystem;
-// d($sort->link('distanceFromRef'));
 $th = [
     ['label' => 'station'],
     ['label' => 'type'],
     ['label' => 'pad'],
-    ['label' => 'distance to arrival', 'sort' => 'distance_to_arrival'],
+    ['label' => 'distance to arrival (ls)', 'sort' => 'distance_to_arrival'],
     ['label' => 'economy'],
     ['label' => 'system'],
-    ['label' => "distance from {$searchModel->refSystem} (LY)", 'sort' => 'distanceFromRef']
+    ['label' => "distance from {$searchModel->refSystem} (ly)", 'sort' => 'distanceFromRef']
 ];
 $formatter = Yii::$app->formatter;
 $formatter->thousandSeparator = ' ';
@@ -27,9 +25,9 @@ $formatter->thousandSeparator = ' ';
         <thead>
             <tr class="text-nowrap">
                 <?php foreach ($th as $item) : ?>
-                    <th scope="col" class="text-orange text">
-                        <?= isset($item['sort']) ? $sort->link($item['sort']) : ucfirst($item['label']) ?>
-                    </th>
+                    <th scope="col" class="text-orange text"><?= isset($item['sort'])
+                        ? $sort->link($item['sort'], ['label' => $item['label']])
+                        : ucfirst($item['label']) ?></th>
                 <?php endforeach; ?>
             </tr>
         </thead>
@@ -49,8 +47,7 @@ $formatter->thousandSeparator = ' ';
                     <td><?= e($model->distance_to_arrival) . ' ls' ?></td>
                     <td><?= e($model->economyId1->economy_name) ?></td>
                     <td>
-                        <span
-                            style="--bs-border-style: dotted"
+                        <span style="--bs-border-style: dotted"
                             class="t-tip border-bottom border-light"
                             data-bs-toggle="tooltip"
                             data-bs-html="true"

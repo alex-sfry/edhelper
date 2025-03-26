@@ -40,7 +40,8 @@ class StationsSearch extends Stations
     public function rules()
     {
         return [
-            ['refSystem', 'required'],
+            ['refSystem', 'default', 'value' => 'Sol'],
+            ['inclSurface', 'default', 'value' => 'No'],
             [['distance_to_arrival'], 'integer'],
             [['minPadSize', 'inclSurface', 'economyId1', 'refSystem'], 'string']
         ];
@@ -72,8 +73,6 @@ class StationsSearch extends Stations
     /**
      * Creates data provider instance with search query applied
      *
-     * @param array $params
-     *
      * @return ActiveDataProvider|null
      */
     public function search()
@@ -94,9 +93,7 @@ class StationsSearch extends Stations
             ],
             'sort' => [
                 'attributes' => [
-                    'distanceFromRef' => [
-                        'label' => "Distance from {$this->refSystem}"
-                    ],
+                    'distanceFromRef',
                     'distance_to_arrival'
                 ],
                 'defaultOrder' => [

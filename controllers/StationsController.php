@@ -19,21 +19,20 @@ class StationsController extends Controller
         $session->open();
         $this->request->get() && $session->set('sti', $this->request->get());
         $searchModel = new StationsSearch();
+        $searchModel->load($session->get('sti'));
 
-        if (empty($session->get('sti'))) {
-            return $this->render('index', ['searchModel' => $searchModel]);
-        }
-        if (!$searchModel->load($session->get('sti')) || !$searchModel->validate()) {
+        if (!$searchModel->validate()) {
             return $this->render('index', ['searchModel' => $searchModel]);
         }
 
         $dataProvider = $searchModel->search();
+        $models = $dataProvider->getModels();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'sort' => $dataProvider->getSort(),
             'pagination' => $dataProvider->getPagination(),
-            'models' => $dataProvider->getModels()
+            'models' => $models
         ]);
     }
 }

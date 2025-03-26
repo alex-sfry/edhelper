@@ -2,6 +2,7 @@
 
 /** @var yii\web\View $this */
 
+use app\assets\AutocompleteAsset;
 use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
 use yii\helpers\Url;
@@ -10,6 +11,7 @@ use yii\helpers\Url;
 /** @var app\models\Stations[] $models */
 
 $this->title = 'Stations';
+AutocompleteAsset::register($this);
 // $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="stations-index container-xxl text-light mt-3">
@@ -29,13 +31,26 @@ $this->title = 'Stations';
                     ]); ?>
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <?= $this->renderFile('@app/views/_common/_dd_input.php', [
-                                'form' => $form,
-                                'model' => $searchModel,
-                                'attribute' => 'refSystem',
-                                'url' => '/search/?systemName='
-                            ]) ?>
-
+                            <div class="ui-front ui-widget">
+                                <div class="d-flex align-items-end">
+                                    <?= $form
+                                        ->field(
+                                            $searchModel,
+                                            'refSystem',
+                                            [
+                                                'options' => ['class' => 'mb-3 w-100'],
+                                                'labelOptions' => ['class' => 'form-label']
+                                            ]
+                                        )
+                                        ->textInput([
+                                            'data-bs-theme' => 'dark',
+                                            'autocomplete' => 'off'
+                                        ]) ?>
+                                    <div class="spinner spinner-border spinner-border-sm text-light visually-hidden"
+                                        role="status">
+                                    </div>
+                                </div>
+                            </div>
                             <?= $form
                                 ->field($searchModel, 'minPadSize', ['labelOptions' => ['class' => 'form-label']])
                                 ->radioList(
@@ -48,7 +63,6 @@ $this->title = 'Stations';
                                         'unselect' => null
                                     ]
                                 ) ?>
-
                             <?= $form
                                 ->field($searchModel, 'inclSurface', ['labelOptions' => ['class' => 'form-label']])
                                 ->radioList(
@@ -81,7 +95,6 @@ $this->title = 'Stations';
                                     ],
                                     ['class' => 'form-select', 'data-bs-theme' => 'dark']
                                 ) ?>
-
                             <?= $form
                                 ->field(
                                     $searchModel,
@@ -91,17 +104,14 @@ $this->title = 'Stations';
                                 ->textInput(['data-bs-theme' => 'dark']) ?>
                         </div>
                     </div>
-
                     <div class="text-center mb-1">
                         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
                     </div>
-
                     <?php ActiveForm::end(); ?>
                 </div>
             </div>
         </div>
     </div>
-
     <?php if (!empty($models)) : ?>
         <?= $this->render(
             'result',
