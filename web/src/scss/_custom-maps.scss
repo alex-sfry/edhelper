@@ -1,19 +1,22 @@
+@import "../../node_modules/bootstrap/scss/_functions.scss";
+@import "../../node_modules/bootstrap/scss/_variables.scss";
+
 $economy-colors: (
-    Agriculture: #4caf50,
-    Colony: #ffc107,
-    Extraction: #9e9e9e,
-    High-Tech: #03a9f4,
-    Industrial: #ff5722,
-    Military: #f44336,
-    Refinery: #795548,
-    Service: #9c27b0,
-    Terraforming: #00bcd4,
-    Tourism: #ffeb3b,
-    Prison: #607d8b,
-    Damaged: #d32f2f,
-    Rescue: #ff9800,
-    Repair: #8bc34a,
-    Engineering: #2196f3,
+    "Agriculture": #4caf50,
+    "Colony": #ffc107,
+    "Extraction": #9e9e9e,
+    "High-Tech": #03a9f4,
+    "Industrial": #ff5722,
+    "Military": #f44336,
+    "Refinery": #795548,
+    "Service": #9c27b0,
+    "Terraforming": #00bcd4,
+    "Tourism": #ffeb3b,
+    "Prison": #607d8b,
+    "Damaged": #d32f2f,
+    "Rescue": #ff9800,
+    "Repair": #8bc34a,
+    "Engineering": #2196f3,
 );
 
 /* purgecss start ignore */
@@ -28,4 +31,17 @@ $economy-colors: (
         color: $color;
     }
 }
+
+// $custom-colors: (
+//     "orange": $orange
+// );
+
+// @each $key, $val in $custom-colors {
+//     .list-group-item-#{$key} {
+//         --bs-#{$key}-text-emphasis: #{tint-color($val, 40%)};
+//         --bs-#{$key}-bg-subtle: #{shade-color($val, 80%)};
+//         --bs-#{$key}-border-subtle: #{shade-color($val, 40%)};
+//     }
+// }
+
 /* purgecss end ignore */
