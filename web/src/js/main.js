@@ -45,17 +45,21 @@ $('.form-filter.collapse').on('hide.bs.collapse', function () {
 // end of form filter button behavior
 
 // custom jQuery Autocomplete widget
-$.widget("custom.bsAutocomplete", $.ui.autocomplete, {
-    _renderMenu: function (ul, items) {
-        const that = this;
-        $.each(items, function (index, item) {
-            that._renderItemData(ul, item);
-        });
-        $(ul).addClass("dropdown-menu overflow-y-auto overflow-x-hidden");
-        $(ul).find('li').addClass('dd-list-item');
-    }
-});
-// end of custom jQuery Autocomplete widget
+if ($.ui) {
+    $.widget("custom.bsAutocomplete", $.ui.autocomplete, {
+        _renderMenu: function (ul, items) {
+            const that = this;
+            $.each(items, function (index, item) {
+                that._renderItemData(ul, item);
+            });
+            $(ul).addClass("dropdown-menu overflow-y-auto overflow-x-hidden");
+            $(ul).find('li').addClass('dd-list-item');
+        }
+    });
+
+    $("#materialtraderssearch-refsystem").bsAutocomplete(acCfg('system', 'materialtraderssearch-refsystem'));
+    $("#stationssearch-refsystem").bsAutocomplete(acCfg('system', 'materialtraderssearch-refsystem'));
+}
 
 function acCfg(cat, inpId) {
     return {
@@ -79,6 +83,8 @@ function acCfg(cat, inpId) {
         }
     }
 }
+// end of custom jQuery Autocomplete widget
 
-$("#materialtraderssearch-refsystem").bsAutocomplete(acCfg('system', 'materialtraderssearch-refsystem'));
-$("#stationssearch-refsystem").bsAutocomplete(acCfg('system', 'materialtraderssearch-refsystem'));
+
+
+
