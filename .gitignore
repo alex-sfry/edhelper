@@ -56,8 +56,7 @@ env.prod.php
 env.test.php
 db.php
 document_errors
-edhelper.db-journal
-.htaccess
+*.db-journal
 .svn
 *.sublime-project
 *.sublime-workspace
