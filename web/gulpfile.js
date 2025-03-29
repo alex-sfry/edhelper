@@ -94,6 +94,20 @@ export const postCss = () => {
     ];
     return gulp.src(src.purgecss)
         .pipe(plumber())
+        .pipe(sourcemaps.init())
+        .pipe(postcss(plugins))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest(dest.css));
+};
+
+export const postCssPurge = () => {
+    const plugins = [
+        autoprefixer(),
+        postcssNested(),
+        cssnano({ preset: ['default', { discardComments: { removeAll: true } }] }),
+    ];
+    return gulp.src(src.purgecss)
+        .pipe(plumber())
         .pipe(purgecss({
             content: src.content,
             variables: false,
@@ -113,5 +127,6 @@ export const watch = () => {
 export const devBs = gulp.series(gulp.parallel(scss, scssBs), watch);
 export const move = gulp.parallel(moveJs, moveCss, moveFonts, moveImages,);
 export const build = gulp.series(clean, gulp.parallel(move, wp, postCss));
+export const buildPurge = gulp.series(clean, gulp.parallel(move, wp, postCssPurge));
 
 export default devBs;

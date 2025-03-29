@@ -6,8 +6,8 @@
     "type": "module",
     "scripts": {
         "start": "gulp",
-        "scss": "gulp devScss",
-        "build": "gulp build"
+        "build": "gulp build",
+        "purge": "gulp buildPurge"
     },
     "keywords": [],
     "author": "",
