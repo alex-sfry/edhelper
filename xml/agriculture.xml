@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <economy classes="text-agriculture agriculture-shadow">agriculture</economy>
+  <import>
+    <commodity>Domestic Appliances</commodity>
+    <commodity>Consumer Technology</commodity>
+    <commodity>Clothing</commodity>
+    <commodity>Trinkets Of Hidden Fortune</commodity>
+    <commodity>Evacuation Shelter</commodity>
+    <commodity>Survival Equipment</commodity>
+    <commodity>Crop Harvesters</commodity>
+    <commodity>Agri-Medicines</commodity>
+    <commodity>Pesticides</commodity>
+    <commodity>Biowaste</commodity>
+  </import>
+  <export>
+    <commodity>Leather</commodity>
+    <commodity>Natural Fabrics</commodity>
+    <commodity>Synthetic Fabrics</commodity>
+    <commodity>Conductive Fabrics</commodity>
+    <commodity>Military Grade Fabrics</commodity>
+    <commodity>Algae</commodity>
+    <commodity>Fruit And Vegetables</commodity>
+    <commodity>Grain</commodity>
+    <commodity>Animal Meat</commodity>
+    <commodity>Fish</commodity>
+    <commodity>Food Cartridges</commodity>
+    <commodity>Synthetic Meat</commodity>
+    <commodity>Tea</commodity>
+    <commodity>Coffee</commodity>
+  </export>
+</root>

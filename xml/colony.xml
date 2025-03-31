@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <economy classes="text-colony colony-shadow">colony</economy>
+  <import>
+    <commodity>Grain</commodity>
+    <commodity>Clothing</commodity>
+    <commodity>Rutile</commodity>
+    <commodity>Pyrophyllite</commodity>
+    <commodity>Cobalt</commodity>
+    <commodity>Power Generators</commodity>
+    <commodity>Water Purifiers</commodity>
+    <commodity>Thermal Cooling Units</commodity>
+    <commodity>Surface Stabilisers</commodity>
+  </import>
+  <export>
+    <commodity>Hydrogen Fuel</commodity>
+    <commodity>Biowaste</commodity>
+    <commodity>Limpets</commodity>
+  </export>
+</root>

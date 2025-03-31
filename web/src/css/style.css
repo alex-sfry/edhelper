@@ -43,7 +43,7 @@
 }
 
 .refinery-shadow {
-  box-shadow: #795548 0px 50px 100px -20px, #795548 0px 30px 60px -30px, #795548 0px -2px 6px 0px inset;
+  box-shadow: #bcaaa4 0px 50px 100px -20px, #bcaaa4 0px 30px 60px -30px, #bcaaa4 0px -2px 6px 0px inset;
 }
 
 .service-shadow {
@@ -103,7 +103,7 @@
 }
 
 .text-refinery {
-  color: #795548;
+  color: #bcaaa4;
 }
 
 .text-service {

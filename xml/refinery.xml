@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <economy classes="text-refinery refinery-shadow">refinery</economy>
+  <import>
+    <commodity>H.E. Suits</commodity>
+    <commodity>Algae</commodity>
+    <commodity>Fruit And Vegetables</commodity>
+    <commodity>Grain</commodity>
+    <commodity>Animal Meat</commodity>
+    <commodity>Fish</commodity>
+    <commodity>Food Cartridges</commodity>
+    <commodity>Synthetic Meat</commodity>
+    <commodity>Tea</commodity>
+    <commodity>Coffee</commodity>
+    <commodity>Domestic Appliances</commodity>
+    <commodity>Consumer Technology</commodity>
+    <commodity>Clothing</commodity>
+    <commodity>Trinkets Of Hidden Fortune</commodity>
+    <commodity>Evacuation Shelter</commodity>
+    <commodity>Survival Equipment</commodity>
+    <commodity>Microbial Furnaces</commodity>
+    <commodity>Bertrandite</commodity>
+    <commodity>Indite</commodity>
+    <commodity>Gallite</commodity>
+    <commodity>Coltan</commodity>
+    <commodity>Uraninite</commodity>
+    <commodity>Lepidolite</commodity>
+    <commodity>Rutile</commodity>
+    <commodity>Bauxite</commodity>
+    <commodity>Painite</commodity>
+    <commodity>Cryolite</commodity>
+    <commodity>Goslarite</commodity>
+    <commodity>Moissanite</commodity>
+    <commodity>Pyrophyllite</commodity>
+    <commodity>Taaffeite</commodity>
+    <commodity>Jadeite</commodity>
+    <commodity>Bromellite</commodity>
+    <commodity>Low Temperature Diamonds</commodity>
+    <commodity>Methanol Monohydrate Crystals</commodity>
+    <commodity>Lithium Hydroxide</commodity>
+    <commodity>Methane Clathrate</commodity>
+    <commodity>Rhodplumsite</commodity>
+    <commodity>Serendibite</commodity>
+    <commodity>Monazite</commodity>
+    <commodity>Musgravite</commodity>
+    <commodity>Benitoite</commodity>
+    <commodity>Grandidierite</commodity>
+    <commodity>Alexandrite</commodity>
+    <commodity>Void Opal</commodity>
+  </import>
+  <export>
+    <commodity>Hydrogen Fuel</commodity>
+    <commodity>Palladium</commodity>
+    <commodity>Gold</commodity>
+    <commodity>Silver</commodity>
+    <commodity>Cobalt</commodity>
+    <commodity>Polymers</commodity>
+    <commodity>Semiconductors</commodity>
+    <commodity>Superconductors</commodity>
+    <commodity>Ceramic Composites</commodity>
+    <commodity>Insulating Membrane</commodity>
+    <commodity>CMM Composite</commodity>
+    <commodity>Neofabric Insulation</commodity>
+    <commodity>Beryllium</commodity>
+    <commodity>Indium</commodity>
+    <commodity>Gallium</commodity>
+    <commodity>Tantalum</commodity>
+    <commodity>Uranium</commodity>
+    <commodity>Lithium</commodity>
+    <commodity>Titanium</commodity>
+    <commodity>Copper</commodity>
+    <commodity>Aluminium</commodity>
+    <commodity>Lanthanum</commodity>
+    <commodity>Thallium</commodity>
+    <commodity>Bismuth</commodity>
+    <commodity>Thorium</commodity>
+  </export>
+</root>

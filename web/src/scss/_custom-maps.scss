@@ -8,7 +8,7 @@ $economy-colors: (
     "High-Tech": #03a9f4,
     "Industrial": #ff5722,
     "Military": #f44336,
-    "Refinery": #795548,
+    "Refinery": tint-color(#795548, 50%),
     "Service": #9c27b0,
     "Terraforming": #00bcd4,
     "Tourism": #ffeb3b,
@@ -18,6 +18,8 @@ $economy-colors: (
     "Repair": #8bc34a,
     "Engineering": #2196f3,
 );
+
+@debug tint-color(#795548, 80%);
 
 /* purgecss start ignore */
 @each $economy, $color in $economy-colors {

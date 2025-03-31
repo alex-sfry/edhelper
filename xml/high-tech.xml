@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <economy classes="text-high-tech high-tech-shadow">high tech</economy>
+  <import>
+    <commodity>Algae</commodity>
+    <commodity>Fruit And Vegetables</commodity>
+    <commodity>Grain</commodity>
+    <commodity>Animal Meat</commodity>
+    <commodity>Fish</commodity>
+    <commodity>Food Cartridges</commodity>
+    <commodity>Synthetic Meat</commodity>
+    <commodity>Tea</commodity>
+    <commodity>Coffee</commodity>
+    <commodity>Platinum</commodity>
+    <commodity>Palladium</commodity>
+    <commodity>Gold</commodity>
+    <commodity>Silver</commodity>
+    <commodity>Cobalt</commodity>
+    <commodity>Beryllium</commodity>
+    <commodity>Indium</commodity>
+    <commodity>Gallium</commodity>
+    <commodity>Tantalum</commodity>
+    <commodity>Uranium</commodity>
+    <commodity>Lithium</commodity>
+    <commodity>Titanium</commodity>
+    <commodity>Copper</commodity>
+    <commodity>Aluminium</commodity>
+    <commodity>Hafnium 178</commodity>
+    <commodity>Osmium</commodity>
+    <commodity>Lanthanum</commodity>
+    <commodity>Thallium</commodity>
+    <commodity>Bismuth</commodity>
+    <commodity>Thorium</commodity>
+    <commodity>Praseodymium</commodity>
+    <commodity>Samarium</commodity>
+    <commodity>Superconductors</commodity>
+    <commodity>Power Generators</commodity>
+    <commodity>Water Purifiers</commodity>
+    <commodity>Microbial Furnaces</commodity>
+    <commodity>Mineral Extractors</commodity>
+    <commodity>Crop Harvesters</commodity>
+    <commodity>Marine Equipment</commodity>
+    <commodity>Atmospheric Processors</commodity>
+    <commodity>Geological Equipment</commodity>
+    <commodity>Thermal Cooling Units</commodity>
+    <commodity>Building Fabricators</commodity>
+    <commodity>Skimmer Components</commodity>
+    <commodity>Articulation Motors</commodity>
+    <commodity>HN Shock Mount</commodity>
+    <commodity>Emergency Power Cells</commodity>
+    <commodity>Power Converter</commodity>
+    <commodity>Energy Grid Assembly</commodity>
+    <commodity>Power Transfer Bus</commodity>
+    <commodity>Radiation Baffle</commodity>
+    <commodity>Exhaust Manifold</commodity>
+    <commodity>Reinforced Mounting Plate</commodity>
+    <commodity>Heatsink Interlink</commodity>
+    <commodity>Magnetic Emitter Coil</commodity>
+    <commodity>Modular Terminals</commodity>
+    <commodity>Ion Distributor</commodity>
+  </import>
+  <export>
+    <commodity>Consumer Technology</commodity>
+    <commodity>Computer Components</commodity>
+    <commodity>H.E. Suits</commodity>
+    <commodity>Robotics</commodity>
+    <commodity>Auto-Fabricators</commodity>
+    <commodity>Animal Monitors</commodity>
+    <commodity>Aquaponic Systems</commodity>
+    <commodity>Advanced Catalysers</commodity>
+    <commodity>Land Enrichment Systems</commodity>
+    <commodity>Resonating Separators</commodity>
+    <commodity>Bioreducing Lichen</commodity>
+    <commodity>Muon Imager</commodity>
+    <commodity>Structural Regulators</commodity>
+    <commodity>Micro Controllers</commodity>
+    <commodity>Hardware Diagnostic Sensor</commodity>
+    <commodity>Medical Diagnostic Equipment</commodity>
+  </export>
+</root>

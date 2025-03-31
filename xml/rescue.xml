@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <economy classes="text-rescue rescue-shadow">rescue</economy>
+  <import>
+    <commodity>Evacuation Shelter</commodity>
+    <commodity>Basic Medicines</commodity>
+    <commodity>H.E. Suits</commodity>
+    <commodity>Liquid Oxygen</commodity>
+    <commodity>Water</commodity>
+    <commodity>Natural Fabrics</commodity>
+  </import>
+  <export>
+    <commodity/>
+  </export>
+</root>

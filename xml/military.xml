@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <economy classes="text-military military-shadow">military</economy>
+  <import>
+    <commodity>Titanium</commodity>
+    <commodity>Thorium</commodity>
+    <commodity>Polymers</commodity>
+    <commodity>H.E. Suits</commodity>
+    <commodity>Aluminium</commodity>
+  </import>
+  <export>
+    <commodity>Robotics</commodity>
+    <commodity>Advanced Catalysers</commodity>
+    <commodity>Hydrogen Fuel</commodity>
+    <commodity>Scrap</commodity>
+    <commodity>Non-Lethal Weapons</commodity>
+  </export>
+</root>

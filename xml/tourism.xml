@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <economy classes="text-tourism tourism-shadow">tourism</economy>
+  <import>
+    <commodity>Fruit And Vegetables</commodity>
+    <commodity>Grain</commodity>
+    <commodity>Animal Meat</commodity>
+    <commodity>Fish</commodity>
+    <commodity>Food Cartridges</commodity>
+    <commodity>Synthetic Meat</commodity>
+    <commodity>Tea</commodity>
+    <commodity>Coffee</commodity>
+    <commodity>Domestic Appliances</commodity>
+    <commodity>Consumer Technology</commodity>
+    <commodity>Clothing</commodity>
+    <commodity>Platinum</commodity>
+    <commodity>Palladium</commodity>
+    <commodity>Gold</commodity>
+    <commodity>Silver</commodity>
+    <commodity>Power Generators</commodity>
+    <commodity>Water Purifiers</commodity>
+    <commodity>Liquor</commodity>
+    <commodity>Tobacco</commodity>
+    <commodity>Wine</commodity>
+    <commodity>Basic Medicines</commodity>
+    <commodity>Progenitor Cells</commodity>
+    <commodity>Non-Lethal Weapons</commodity>
+    <commodity>Reactive Armour</commodity>
+    <commodity>Beer</commodity>
+  </import>
+  <export>
+    <commodity>Hydrogen Fuel</commodity>
+    <commodity>Biowaste</commodity>
+  </export>
+</root>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <economies_list>
+    <economy slug="agriculture">Agriculture</economy>
+    <economy slug="colony">Colony</economy>
+    <!-- <economy slug="damaged">Damaged</economy> -->
+    <economy slug="extraction">Extraction</economy>
+    <economy slug="high-tech">High Tech</economy>
+    <economy slug="industrial">Industrial</economy>
+    <economy slug="military">Military</economy>
+    <economy slug="refinery">Refinery</economy>
+    <!-- <economy slug="repair">Repair</economy> -->
+    <!-- <economy slug="rescue">Rescue</economy> -->
+    <!-- <economy slug="service">Service</economy> -->
+    <economy slug="terraforming">Terraforming</economy>
+    <economy slug="tourism">Tourism</economy>
+  </economies_list>
+</root>

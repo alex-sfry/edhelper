@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <economy classes="text-repair repair-shadow">repair</economy>
+  <import>
+    <commodity>Rutile</commodity>
+    <commodity>Palladium</commodity>
+    <commodity>Lithium</commodity>
+    <commodity>Polymers</commodity>
+    <commodity>Auto-Fabricators</commodity>
+    <commodity>Robotics</commodity>
+    <commodity>Conductive Fabrics</commodity>
+  </import>
+  <export>
+    <commodity>Hydrogen Fuel</commodity>
+  </export>
+</root>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <economy classes="text-extraction extraction-shadow">extraction</economy>
+  <import>
+    <commodity>Explosives</commodity>
+    <commodity>Mineral Extractors</commodity>
+    <commodity>H.E. Suits</commodity>
+    <commodity>Basic Medicines</commodity>
+    <commodity>Algae</commodity>
+    <commodity>Fruit And Vegetables</commodity>
+    <commodity>Grain</commodity>
+    <commodity>Animal Meat</commodity>
+    <commodity>Fish</commodity>
+    <commodity>Food Cartridges</commodity>
+    <commodity>Synthetic Meat</commodity>
+    <commodity>Tea</commodity>
+    <commodity>Coffee</commodity>
+    <commodity>Domestic Appliances</commodity>
+    <commodity>Consumer Technology</commodity>
+    <commodity>Clothing</commodity>
+    <commodity>Trinkets Of Hidden Fortune</commodity>
+    <commodity>Evacuation Shelter</commodity>
+    <commodity>Survival Equipment</commodity>
+  </import>
+  <export>
+    <commodity>Hydrogen Fuel</commodity>
+    <commodity>Bertrandite</commodity>
+    <commodity>Indite</commodity>
+    <commodity>Gallite</commodity>
+    <commodity>Coltan</commodity>
+    <commodity>Uraninite</commodity>
+    <commodity>Lepidolite</commodity>
+    <commodity>Rutile</commodity>
+    <commodity>Bauxite</commodity>
+    <commodity>Cryolite</commodity>
+    <commodity>Goslarite</commodity>
+    <commodity>Pyrophyllite</commodity>
+    <commodity>Palladium</commodity>
+    <commodity>Gold</commodity>
+    <commodity>Silver</commodity>
+    <commodity>Cobalt</commodity>
+  </export>
+</root>
