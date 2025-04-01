@@ -6,6 +6,7 @@ use yii\helpers\Url;
 /** @var DOMNode[] $economies */
 /** @var DOMNode[] $import */
 /** @var DOMNode[] $export */
+/** @var string $economy */
 
 $this->title = 'Economies';
 ?>
@@ -15,12 +16,13 @@ $this->title = 'Economies';
         <div class="col-12 col-lg-2">
             <div class="list-group list-group-flush">
                 <?php foreach ($economies as $item) : ?>
+                    <?php $cls = strtolower($item->nodeValue) === strtolower($economy) ? ' active' : '' ?>
                     <a
                         href="<?= Url::to([
                             'economies/details',
                             'slug' => $item->attributes->getNamedItem('slug')->nodeValue
                         ]) ?>"
-                        class="list-group-item list-group-item-action"><?= $item->nodeValue ?></a>
+                        class="list-group-item list-group-item-action<?= $cls ?>"><?= $item->nodeValue ?></a>
                 <?php endforeach; ?>
             </div>
         </div>
