@@ -6,6 +6,7 @@
 /** @var yii\data\Sort $sort */
 /** @var yii\data\Pagination $pagination */
 
+use yii\bootstrap5\Html;
 use yii\bootstrap5\LinkPager;
 
 $th = [
@@ -25,9 +26,11 @@ $formatter->thousandSeparator = ' ';
         <thead>
             <tr class="text-nowrap">
                 <?php foreach ($th as $item) : ?>
-                    <th scope="col" class="text-orange text"><?= isset($item['sort'])
-                        ? $sort->link($item['sort'], ['label' => $item['label']])
-                        : ucfirst($item['label']) ?></th>
+                    <?= Html::beginTag('th', ['scope' => 'col', 'class' => 'text-orange text']) ?>
+                        <?= isset($item['sort'])
+                            ? $sort->link($item['sort'], ['label' => $item['label']])
+                            : ucfirst($item['label']) ?>
+                    <?= Html::endTag('th') ?>
                 <?php endforeach; ?>
             </tr>
         </thead>
