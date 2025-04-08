@@ -5,6 +5,7 @@
 /** @var yii\data\Pagination $pagination */
 /** @var app\models\MaterialTradersSearch $searchModel */
 
+use yii\bootstrap5\Html;
 use yii\bootstrap5\LinkPager;
 
 $th = [
@@ -17,12 +18,15 @@ $th = [
 $formatter = Yii::$app->formatter;
 $formatter->thousandSeparator = ' ';
 ?>
-<div class="table-responsive rounded-1">
-    <table class="table mb-0">
+<div class="table-responsive">
+    <table class="table table-striped">
         <thead>
-            <tr class="text-nowrap w-100 h-100">
+            <tr class="text-nowrap">
                 <?php foreach ($th as $item) : ?>
-                    <th scope="col" class="text-orange"><?= ucfirst($item['label']) ?></th>
+                    <?= Html::tag('th', ucfirst($item['label']), [
+                        'scope' => 'col',
+                        'class' => 'text-orange border-bottom border-secondary'
+                    ]) ?>
                 <?php endforeach; ?>
             </tr>
         </thead>
@@ -53,13 +57,12 @@ $formatter->thousandSeparator = ' ';
         </tbody>
     </table>
 </div>
-<div class="d-flex justify-content-center mt-3">
+<div class="d-flex justify-content-center">
     <?= LinkPager::widget([
         'pagination' => $pagination,
         'maxButtonCount' => 5,
         'firstPageLabel' => true,
         'lastPageLabel' => true,
         // 'listOptions' => ['class' => 'pagination'],
-        'options' => ['data-bs-theme' => 'dark']
     ]) ?>
 </div>

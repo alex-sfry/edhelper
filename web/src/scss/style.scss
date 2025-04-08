@@ -5,12 +5,6 @@
 @import "../../node_modules/bootstrap/scss/_variables.scss";
 
 /* purgecss start ignore */
-[data-bs-theme=dark] {
-    table {
-        --bs-table-color: #{$gray-300} !important;
-    }
-}
-
 .roboto {
     font-family: "Roboto", sans-serif;
 }
@@ -27,6 +21,24 @@
     cursor: help;
 }
 
+.list-group-item {
+    --bs-list-group-bg: #{$light};
+
+    &:hover {
+        --bs-list-group-action-hover-bg: #{$gray-200};
+    }
+}
+
+.form-select,
+.form-control {
+    background-color: $light;
+    --bs-border-color: #{$gray-500};
+}
+
+.form-check-input {
+    --bs-border-color: #{$gray-500};
+}
+
 .form-group {
     margin-bottom: 1rem;
 }
@@ -37,10 +49,6 @@
 
 .bg-gray-300 {
     background-color: $gray-300 !important;
-}
-
-.bg-gray-900 {
-    background-color: $gray-900 !important;
 }
 
 .bg-layout {
@@ -60,39 +68,6 @@
     .nav-link.active {
         --bs-navbar-active-color: #{$cyan-500};
     }
-}
-
-.tabs-dark {
-    --bs-nav-link-color: #{$cyan-200}; // ???
-    --bs-border-color: #{$gray-600}; // ???
-}
-
-.shadow-in-wh {
-    box-shadow: $white 0px 50px 100px -20px, $white 0px 30px 60px -30px, $white 0px -2px 6px 0px inset;
-}
-
-.shadow-in-primary {
-    box-shadow: $primary 0px 50px 100px -20px, $primary 0px 30px 60px -30px, $primary 0px -2px 6px 0px inset;
-}
-
-h3.import-export::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: $gray-300;
-}
-
-.form-control[data-bs-theme="dark"],
-.input-group[data-bs-theme="dark"],
-.form-select[data-bs-theme="dark"] {
-    --bs-border-color: #{$gray-500};
-}
-
-form[data-bs-theme="dark"] {
-    @extend .bg-gray-900;
 }
 
 a.asc:after,
@@ -115,31 +90,6 @@ a.asc:after {
 a.desc:after {
     border-top: solid 7px #212529;
     border-bottom-width: 0;
-}
-
-table[data-bs-theme="dark"] {
-    a.asc:after {
-        border-bottom: solid 7px $gray-300;
-        border-top-width: 0;
-    }
-
-    a.desc:after {
-        border-top: solid 7px $gray-300;
-        border-bottom-width: 0;
-    }
-
-    --bs-table-striped-color: $gray-300 !important;
-    --bs-table-color: $gray-300 !important;
-}
-
-.grid-view th {
-    white-space: nowrap;
-}
-
-.hint-block {
-    display: block;
-    margin-top: 5px;
-    color: #999;
 }
 
 .error-summary {

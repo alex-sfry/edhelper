@@ -19,7 +19,7 @@ $economy-colors: (
     "Engineering": #2196f3,
 );
 
-@debug tint-color(#795548, 80%);
+// @debug tint-color(#795548, 80%);
 
 /* purgecss start ignore */
 @each $economy, $color in $economy-colors {

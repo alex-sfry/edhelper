@@ -14,8 +14,8 @@ $this->title = 'Stations';
 AutocompleteAsset::register($this);
 // $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="stations-index container-xxl text-light mt-3">
-    <h1 class="text-center"><?= $this->title ?></h1>
+<div class="stations-index container-xxl mt-3">
+    <h1 class="text-center text-light"><?= $this->title ?></h1>
     <div class="row mt-3">
         <div class="col-12 col-md-9 col-lg-8">
             <div class="stations-search d-flex">
@@ -36,7 +36,7 @@ AutocompleteAsset::register($this);
                             'action' => Url::to(['stations/index']),
                             'method' => 'get',
                             'successCssClass' => null,
-                            'options' => ['class' => 'py-1 px-2 mb-3', 'data-bs-theme' => 'dark', 'novalidate' => '']
+                            'options' => ['class' => 'bg-light py-1 px-2 mb-3', 'novalidate' => true]
                         ]); ?>
                         <div class="row">
                             <div class="col-12 col-md-6">
@@ -52,10 +52,9 @@ AutocompleteAsset::register($this);
                                                 ]
                                             )
                                             ->textInput([
-                                                'data-bs-theme' => 'dark',
                                                 'autocomplete' => 'off'
                                             ]) ?>
-                                        <div class="spinner spinner-border spinner-border-sm text-light visually-hidden"
+                                        <div class="spinner spinner-border spinner-border-sm visually-hidden"
                                             role="status">
                                         </div>
                                     </div>
@@ -67,7 +66,6 @@ AutocompleteAsset::register($this);
                                         [
                                             'class' => 'd-flex',
                                             'separator' => '<span class="mx-2"></span>',
-                                            'data-bs-theme' => 'dark',
                                             'itemOptions' => ['labelOptions' => ['class' => 'form-check-label']],
                                             'unselect' => null
                                         ]
@@ -79,7 +77,6 @@ AutocompleteAsset::register($this);
                                         [
                                             'class' => 'd-flex',
                                             'separator' => '<span class="mx-2"></span>',
-                                            'data-bs-theme' => 'dark',
                                             'itemOptions' => ['labelOptions' => ['class' => 'form-check-label']],
                                             'unselect' => null
                                         ]
@@ -102,15 +99,14 @@ AutocompleteAsset::register($this);
                                             10 => "Terraforming",
                                             11 => "Tourism",
                                         ],
-                                        ['class' => 'form-select', 'data-bs-theme' => 'dark']
+                                        ['class' => 'form-select']
                                     ) ?>
                                 <?= $form
                                     ->field(
                                         $searchModel,
                                         'distance_to_arrival',
                                         ['labelOptions' => ['class' => 'form-label']]
-                                    )
-                                    ->textInput(['data-bs-theme' => 'dark']) ?>
+                                    ) ?>
                             </div>
                         </div>
                         <div class="text-center mb-1">
@@ -133,7 +129,7 @@ AutocompleteAsset::register($this);
             ]
         ); ?>
     <?php elseif (isset($models)) : ?>
-        <div class="text-center text-danger fs-5 fw-bold text-uppercase bg-dark p-2 mt-4">
+        <div class="text-center bg-light text-danger fs-5 fw-bold text-uppercase p-2 mt-4">
             found nothing
         </div>
     <?php endif; ?>

@@ -7,25 +7,25 @@ $th = ['name', 'upgrades', 'system', 'station', 'discovery', 'invite', 'unlock']
 
 $this->title = 'Engineers';
 ?>
-<div class="container-xxl text-light mt-3">
-    <h1 class="text-center"><?= $this->title ?></h1>
+<div class="container-xxl mt-3">
+    <h1 class="text-center text-light"><?= $this->title ?></h1>
     <div class="row mt-3">
         <div class="col-3 my-2">
-            <div class="input-group input-group-sm" data-bs-theme="dark">
+            <div class="input-group input-group-sm">
                 <label for="" class="input-group-text">Search for upgrades:</label>
                 <input type="text" class="search form-control form-control-sm" data-filter-idx="1" autocomplete="off">
             </div>
         </div>
-        <div class="table-responsive">
-            <table style="--th-bg: var(--bs-table-bg)" id="dataTable"
-                class="table table-striped table-bordered table-sm fs-7" data-bs-theme="dark">
+        <div class="table-responsive rounded-1">
+            <table id="dataTable"
+                class="table table-striped">
                 <thead>
                     <tr>
                         <?php foreach ($th as $item) : ?>
                         <th
                             scope="col"
-                            class="text-orange rounded-0 text-uppercase border border-2 fw-bold">
-                            <?= $item ?>
+                            class="text-orange border-bottom border-secondary">
+                            <?= ucfirst($item) ?>
                         </th>
                         <?php endforeach; ?>
                     </tr>

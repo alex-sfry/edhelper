@@ -22,11 +22,14 @@ $formatter = Yii::$app->formatter;
 $formatter->thousandSeparator = ' ';
 ?>
 <div class="table-responsive">
-    <table class="table" data-bs-theme="dark">
+    <table class="table table-striped">
         <thead>
             <tr class="text-nowrap">
                 <?php foreach ($th as $item) : ?>
-                    <?= Html::beginTag('th', ['scope' => 'col', 'class' => 'text-orange text']) ?>
+                    <?= Html::beginTag('th', [
+                        'scope' => 'col',
+                        'class' => 'text-orange border-bottom border-secondary'
+                    ]) ?>
                         <?= isset($item['sort'])
                             ? $sort->link($item['sort'], ['label' => $item['label']])
                             : ucfirst($item['label']) ?>
@@ -41,22 +44,38 @@ $formatter->thousandSeparator = ' ';
                 $pop = $formatter->asInteger($model->system->population);
                 $tooltip = "<div class='text-start'>Security: $sec</div></div><div>Population: $pop</div>";
                 ?>
+
                 <tr>
                     <td><?= e($model->name) ?></td>
-                    <td class="<?= $model->surface ? 'bg-success' : 'bg-primary' ?>">
+
+                    <?php
+                    $options = ['class' => 'text-light'];
+                    if ($model->surface) {
+                        Html::addCssClass($options, 'bg-success');
+                    } else {
+                        Html::addCssClass($options, 'bg-primary');
+                    }
+                    ?>
+
+                    <?= Html::beginTag('td', $options) ?>
                         <?= e($model->type) ?>
-                    </td>
+                    <?= Html::endTag('td') ?>
+
                     <td><?= e($model->pad) ?></td>
                     <td><?= e($model->distance_to_arrival) . ' ls' ?></td>
                     <td><?= e($model->economyId1->economy_name) ?></td>
                     <td>
-                        <span style="--bs-border-style: dotted"
-                            class="t-tip border-bottom border-light"
-                            data-bs-toggle="tooltip"
-                            data-bs-html="true"
-                            data-bs-title="<?= $tooltip ?>">
+
+                        <?= Html::beginTag('span', [
+                            'style' => '--bs-border-style: dotted',
+                            'class' => 't-tip border-bottom border-dark',
+                            'data-bs-toggle' => 'tooltip',
+                            'data-bs-html' => 'true',
+                            'data-bs-title' => $tooltip
+                        ]) ?>
                             <?= e($model->system->name) ?>
-                        </span>
+                        <?= Html::endTag('span') ?>
+
                     </td>
                     <td><?= e($model->distanceFromRef) . ' ly' ?></td>
                 </tr>
@@ -70,7 +89,6 @@ $formatter->thousandSeparator = ' ';
         'maxButtonCount' => 5,
         'firstPageLabel' => true,
         'lastPageLabel' => true,
-        // 'listOptions' => ['class' => 'pagination'],
-        'options' => ['data-bs-theme' => 'dark']
+        // 'listOptions' => ['class' => 'pagination']
     ]) ?>
 </div>

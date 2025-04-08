@@ -13,8 +13,8 @@ $this->title = 'Material traders';
 AutocompleteAsset::register($this);
 // $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="mt-index container-xxl text-light mt-3">
-    <h1 class="text-center"><?= e($this->title) ?></h1>
+<div class="mt-index container-xxl mt-3">
+    <h1 class="text-center text-light"><?= e($this->title) ?></h1>
     <div class="row mt-3">
         <div class="col-12 col-md-9 col-lg-8">
             <div class="mt-search d-flex">
@@ -35,8 +35,7 @@ AutocompleteAsset::register($this);
                             'method' => 'get',
                             'successCssClass' => null,
                             'options' => [
-                                'class' => 'py-1 px-2 mb-3 rounded-1',
-                                'data-bs-theme' => 'dark',
+                                'class' => 'bg-light py-1 px-2 mb-3 rounded-1',
                                 'novalidate' => ''
                             ]
                         ]); ?>
@@ -54,10 +53,9 @@ AutocompleteAsset::register($this);
                                                 ]
                                             )
                                             ->textInput([
-                                                'data-bs-theme' => 'dark',
                                                 'autocomplete' => 'off'
                                             ]) ?>
-                                        <div class="spinner spinner-border spinner-border-sm text-light visually-hidden"
+                                        <div class="spinner spinner-border spinner-border-sm visually-hidden"
                                             role="status">
                                         </div>
                                     </div>
@@ -77,7 +75,7 @@ AutocompleteAsset::register($this);
                                             'Encoded' => 'Encoded',
                                             'Manufactured' => 'Manufactured'
                                         ],
-                                        ['class' => 'form-select', 'data-bs-theme' => 'dark']
+                                        ['class' => 'form-select']
                                     ) ?>
                             </div>
                         </div>
@@ -105,7 +103,7 @@ AutocompleteAsset::register($this);
             ]
         ); ?>
     <?php elseif (isset($models)) : ?>
-        <div class="text-center text-danger fs-5 fw-bold text-uppercase bg-dark p-2 mt-4">
+        <div class="text-center bg-light text-danger fs-5 fw-bold text-uppercase p-2 mt-4">
             found nothing
         </div>
     <?php endif; ?>

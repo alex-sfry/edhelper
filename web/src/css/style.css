@@ -140,10 +140,6 @@
 
 /* purgecss end ignore */
 /* purgecss start ignore */
-[data-bs-theme=dark] table {
-  --bs-table-color: #dee2e6 !important;
-}
-
 .roboto {
   font-family: "Roboto", sans-serif;
 }
@@ -160,6 +156,23 @@
   cursor: help;
 }
 
+.list-group-item {
+  --bs-list-group-bg: #f8f9fa;
+}
+.list-group-item:hover {
+  --bs-list-group-action-hover-bg: #e9ecef;
+}
+
+.form-select,
+.form-control {
+  background-color: #f8f9fa;
+  --bs-border-color: #adb5bd;
+}
+
+.form-check-input {
+  --bs-border-color: #adb5bd;
+}
+
 .form-group {
   margin-bottom: 1rem;
 }
@@ -170,10 +183,6 @@
 
 .bg-gray-300, .ui-menu .dd-list-item:hover {
   background-color: #dee2e6 !important;
-}
-
-.bg-gray-900, form[data-bs-theme=dark] {
-  background-color: #212529 !important;
 }
 
 .bg-layout {
@@ -190,35 +199,6 @@
 }
 .edh-header .nav-link.active {
   --bs-navbar-active-color: #0dcaf0;
-}
-
-.tabs-dark {
-  --bs-nav-link-color: #9eeaf9;
-  --bs-border-color: #6c757d;
-}
-
-.shadow-in-wh {
-  box-shadow: #fff 0px 50px 100px -20px, #fff 0px 30px 60px -30px, #fff 0px -2px 6px 0px inset;
-}
-
-.shadow-in-primary {
-  box-shadow: #0d6efd 0px 50px 100px -20px, #0d6efd 0px 30px 60px -30px, #0d6efd 0px -2px 6px 0px inset;
-}
-
-h3.import-export::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #dee2e6;
-}
-
-.form-control[data-bs-theme=dark],
-.input-group[data-bs-theme=dark],
-.form-select[data-bs-theme=dark] {
-  --bs-border-color: #adb5bd;
 }
 
 a.asc:after,
@@ -241,29 +221,6 @@ a.asc:after {
 a.desc:after {
   border-top: solid 7px #212529;
   border-bottom-width: 0;
-}
-
-table[data-bs-theme=dark] {
-  --bs-table-striped-color: $gray-300 !important;
-  --bs-table-color: $gray-300 !important;
-}
-table[data-bs-theme=dark] a.asc:after {
-  border-bottom: solid 7px #dee2e6;
-  border-top-width: 0;
-}
-table[data-bs-theme=dark] a.desc:after {
-  border-top: solid 7px #dee2e6;
-  border-bottom-width: 0;
-}
-
-.grid-view th {
-  white-space: nowrap;
-}
-
-.hint-block {
-  display: block;
-  margin-top: 5px;
-  color: #999;
 }
 
 .error-summary {
