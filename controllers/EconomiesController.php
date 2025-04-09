@@ -3,7 +3,7 @@
 namespace app\controllers;
 
 use app\models\SupplyDemand;
-use InvalidArgumentException;
+use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 
 class EconomiesController extends Controller
@@ -16,15 +16,7 @@ class EconomiesController extends Controller
         $model = new SupplyDemand();
         $query = $model->find()->select(['economy_id'])->distinct()->with('economy');
 
-        $dom = new \DOMDocument();
-        $dom->loadXML(file_get_contents(\Yii::getAlias('@app/xml/economies.xml')));
-        $xpath_economies = new \DOMXPath($dom);
-        $economies_nodes = $xpath_economies->query("//economies_list/economy");
-
-        return $this->render('index', [
-            'economies' => $economies_nodes,
-            'models' => $query->all()
-        ]);
+        return $this->render('index', ['models' => $query->all()]);
     }
 
     /**
@@ -33,31 +25,22 @@ class EconomiesController extends Controller
      */
     public function actionDetails($slug)
     {
-        $dom = new \DOMDocument();
-        $dom->loadXML(file_get_contents(\Yii::getAlias('@app/xml/economies.xml')));
+        $model = new SupplyDemand();
+        $e_q = $model->find()->distinct()->select(['economy_id'])->with('economy');
+        $d_q = $model->find()->innerJoinWith('economy')->where(['slug' => $slug]);
+        $models = $d_q->asArray()->all();
 
-        $xpath_economies = new \DOMXPath($dom);
-        $economies_nodes = $xpath_economies->query("//economies_list/economy");
-
-        $file = file_get_contents(\Yii::getAlias("@app/xml/$slug.xml"));
-        if (!$file) {
-            throw new InvalidArgumentException();
+        if (empty($models)) {
+            return $this->redirect(['economies/index']);
         }
-        $dom->loadXML($file);
 
-        $xpath_import_export = new \DOMXPath($dom);
-        $economy_node = $xpath_import_export->query("/root/economy")[0]; // economy name node
-        $economy = $economy_node->nodeValue;
-        $classes = $economy_node->attributes->getNamedItem('classes')->nodeValue; // html classes
-        $import_nodes = $xpath_import_export->query("//import/commodity");
-        $export_nodes = $xpath_import_export->query("//export/commodity");
+        $d_models = ArrayHelper::map($models, 'id', 'commodity', 'import_export');
 
         return $this->render('details', [
-            'economies' => $economies_nodes,
-            'economy' => $economy,
-            'classes' => $classes,
-            'import' => $import_nodes,
-            'export' => $export_nodes
+            'e_models' => $e_q->asArray()->all(),
+            'd_models' => $d_models,
+            'economy' => $models[0]['economy']['economy_name'],
+            'slug' => $models[0]['economy']['slug']
         ]);
     }
 }

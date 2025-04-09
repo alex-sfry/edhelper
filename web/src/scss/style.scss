@@ -5,8 +5,16 @@
 @import "../../node_modules/bootstrap/scss/_variables.scss";
 
 /* purgecss start ignore */
+:root {
+    --bs-body-font-family: "Inter", sans-serif;
+}
+
 .roboto {
     font-family: "Roboto", sans-serif;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
 }
 
 .btn {
@@ -27,6 +35,10 @@
     &:hover {
         --bs-list-group-action-hover-bg: #{$gray-200};
     }
+}
+
+.accordion-button {
+    --bs-accordion-btn-bg: #{$gray-300};
 }
 
 .form-select,

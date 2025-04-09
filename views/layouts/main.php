@@ -29,7 +29,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?php $this->head() ?>
 </head>
 
-<body class="roboto lsp-01 d-flex flex-column overflow-x-hidden h-100">
+<body class="lsp-01 d-flex flex-column overflow-x-hidden h-100">
     <?php $this->beginBody() ?>
     <header class="edh-header">
         <nav class="navbar navbar-expand-lg bg-layout">

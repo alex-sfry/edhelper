@@ -17,6 +17,24 @@
   font-weight: 700;
   font-display: swap;
 }
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
 /* purgecss start ignore */
 .agriculture-shadow {
   box-shadow: #4caf50 0px 50px 100px -20px, #4caf50 0px 30px 60px -30px, #4caf50 0px -2px 6px 0px inset;
@@ -140,8 +158,16 @@
 
 /* purgecss end ignore */
 /* purgecss start ignore */
+:root {
+  --bs-body-font-family: "Inter", sans-serif;
+}
+
 .roboto {
   font-family: "Roboto", sans-serif;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
 }
 
 .btn {
@@ -161,6 +187,10 @@
 }
 .list-group-item:hover {
   --bs-list-group-action-hover-bg: #e9ecef;
+}
+
+.accordion-button {
+  --bs-accordion-btn-bg: #dee2e6;
 }
 
 .form-select,
