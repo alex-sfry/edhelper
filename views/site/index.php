@@ -4,7 +4,7 @@
 
 use yii\bootstrap5\Html;
 
-$this->title = 'My Yii Application';
+$this->title = 'Elite Dangerous Helper';
 ?>
 <div class="container-xxl mt-5">
     <div class="row flex-column align-content-center px-2">
