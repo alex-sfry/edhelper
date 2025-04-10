@@ -43,7 +43,7 @@ $this->title = $economy;
             </div>
         </div>
         <div class="col-md-8 col-lg-9">
-            <div class="row flex-column align-content-center w">
+            <div class="row flex-column align-content-center">
                 <div class="col-sm-8 col-md-12 text-center">
                     <div class="text-center">
                         <?php
