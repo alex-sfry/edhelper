@@ -12,6 +12,8 @@ return [
         'engineers' => 'engineers/index',
         'economies/<slug:[\w-]+>' => 'economies/details',
         'economies' => 'economies/index',
+        'trading/<slug:[\w-]+>' => 'trading/details',
+        'trading' => 'trading/index',
         // 'site/contact' => 'site/contact',
         // 'site/signup' => 'site/signup',
         // 'site/login' => 'site/login',

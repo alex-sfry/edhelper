@@ -37,123 +37,123 @@
 }
 /* purgecss start ignore */
 .agriculture-shadow {
-  box-shadow: #4caf50 0px 50px 100px -20px, #4caf50 0px 30px 60px -30px, #4caf50 0px -2px 6px 0px inset;
+  box-shadow: #4caf50 0px 50px 100px -20px, #4caf50 0px 30px 60px -30px, #4caf50 0px -2px 6px 0px inset !important;
 }
 
 .colony-shadow {
-  box-shadow: #ffc107 0px 50px 100px -20px, #ffc107 0px 30px 60px -30px, #ffc107 0px -2px 6px 0px inset;
+  box-shadow: #ffc107 0px 50px 100px -20px, #ffc107 0px 30px 60px -30px, #ffc107 0px -2px 6px 0px inset !important;
 }
 
 .extraction-shadow {
-  box-shadow: #9e9e9e 0px 50px 100px -20px, #9e9e9e 0px 30px 60px -30px, #9e9e9e 0px -2px 6px 0px inset;
+  box-shadow: #9e9e9e 0px 50px 100px -20px, #9e9e9e 0px 30px 60px -30px, #9e9e9e 0px -2px 6px 0px inset !important;
 }
 
 .high-tech-shadow {
-  box-shadow: #03a9f4 0px 50px 100px -20px, #03a9f4 0px 30px 60px -30px, #03a9f4 0px -2px 6px 0px inset;
+  box-shadow: #03a9f4 0px 50px 100px -20px, #03a9f4 0px 30px 60px -30px, #03a9f4 0px -2px 6px 0px inset !important;
 }
 
 .industrial-shadow {
-  box-shadow: #ff5722 0px 50px 100px -20px, #ff5722 0px 30px 60px -30px, #ff5722 0px -2px 6px 0px inset;
+  box-shadow: #ff5722 0px 50px 100px -20px, #ff5722 0px 30px 60px -30px, #ff5722 0px -2px 6px 0px inset !important;
 }
 
 .military-shadow {
-  box-shadow: #f44336 0px 50px 100px -20px, #f44336 0px 30px 60px -30px, #f44336 0px -2px 6px 0px inset;
+  box-shadow: #f44336 0px 50px 100px -20px, #f44336 0px 30px 60px -30px, #f44336 0px -2px 6px 0px inset !important;
 }
 
 .refinery-shadow {
-  box-shadow: #bcaaa4 0px 50px 100px -20px, #bcaaa4 0px 30px 60px -30px, #bcaaa4 0px -2px 6px 0px inset;
+  box-shadow: #bcaaa4 0px 50px 100px -20px, #bcaaa4 0px 30px 60px -30px, #bcaaa4 0px -2px 6px 0px inset !important;
 }
 
 .service-shadow {
-  box-shadow: #9c27b0 0px 50px 100px -20px, #9c27b0 0px 30px 60px -30px, #9c27b0 0px -2px 6px 0px inset;
+  box-shadow: #9c27b0 0px 50px 100px -20px, #9c27b0 0px 30px 60px -30px, #9c27b0 0px -2px 6px 0px inset !important;
 }
 
 .terraforming-shadow {
-  box-shadow: #00bcd4 0px 50px 100px -20px, #00bcd4 0px 30px 60px -30px, #00bcd4 0px -2px 6px 0px inset;
+  box-shadow: #00bcd4 0px 50px 100px -20px, #00bcd4 0px 30px 60px -30px, #00bcd4 0px -2px 6px 0px inset !important;
 }
 
 .tourism-shadow {
-  box-shadow: #ffeb3b 0px 50px 100px -20px, #ffeb3b 0px 30px 60px -30px, #ffeb3b 0px -2px 6px 0px inset;
+  box-shadow: #ffeb3b 0px 50px 100px -20px, #ffeb3b 0px 30px 60px -30px, #ffeb3b 0px -2px 6px 0px inset !important;
 }
 
 .prison-shadow {
-  box-shadow: #607d8b 0px 50px 100px -20px, #607d8b 0px 30px 60px -30px, #607d8b 0px -2px 6px 0px inset;
+  box-shadow: #607d8b 0px 50px 100px -20px, #607d8b 0px 30px 60px -30px, #607d8b 0px -2px 6px 0px inset !important;
 }
 
 .damaged-shadow {
-  box-shadow: #d32f2f 0px 50px 100px -20px, #d32f2f 0px 30px 60px -30px, #d32f2f 0px -2px 6px 0px inset;
+  box-shadow: #d32f2f 0px 50px 100px -20px, #d32f2f 0px 30px 60px -30px, #d32f2f 0px -2px 6px 0px inset !important;
 }
 
 .rescue-shadow {
-  box-shadow: #ff9800 0px 50px 100px -20px, #ff9800 0px 30px 60px -30px, #ff9800 0px -2px 6px 0px inset;
+  box-shadow: #ff9800 0px 50px 100px -20px, #ff9800 0px 30px 60px -30px, #ff9800 0px -2px 6px 0px inset !important;
 }
 
 .repair-shadow {
-  box-shadow: #8bc34a 0px 50px 100px -20px, #8bc34a 0px 30px 60px -30px, #8bc34a 0px -2px 6px 0px inset;
+  box-shadow: #8bc34a 0px 50px 100px -20px, #8bc34a 0px 30px 60px -30px, #8bc34a 0px -2px 6px 0px inset !important;
 }
 
 .engineering-shadow {
-  box-shadow: #2196f3 0px 50px 100px -20px, #2196f3 0px 30px 60px -30px, #2196f3 0px -2px 6px 0px inset;
+  box-shadow: #2196f3 0px 50px 100px -20px, #2196f3 0px 30px 60px -30px, #2196f3 0px -2px 6px 0px inset !important;
 }
 
 .text-agriculture {
-  color: #4caf50;
+  color: #4caf50 !important;
 }
 
 .text-colony {
-  color: #ffc107;
+  color: #ffc107 !important;
 }
 
 .text-extraction {
-  color: #9e9e9e;
+  color: #9e9e9e !important;
 }
 
 .text-high-tech {
-  color: #03a9f4;
+  color: #03a9f4 !important;
 }
 
 .text-industrial {
-  color: #ff5722;
+  color: #ff5722 !important;
 }
 
 .text-military {
-  color: #f44336;
+  color: #f44336 !important;
 }
 
 .text-refinery {
-  color: #bcaaa4;
+  color: #bcaaa4 !important;
 }
 
 .text-service {
-  color: #9c27b0;
+  color: #9c27b0 !important;
 }
 
 .text-terraforming {
-  color: #00bcd4;
+  color: #00bcd4 !important;
 }
 
 .text-tourism {
-  color: #ffeb3b;
+  color: #ffeb3b !important;
 }
 
 .text-prison {
-  color: #607d8b;
+  color: #607d8b !important;
 }
 
 .text-damaged {
-  color: #d32f2f;
+  color: #d32f2f !important;
 }
 
 .text-rescue {
-  color: #ff9800;
+  color: #ff9800 !important;
 }
 
 .text-repair {
-  color: #8bc34a;
+  color: #8bc34a !important;
 }
 
 .text-engineering {
-  color: #2196f3;
+  color: #2196f3 !important;
 }
 
 /* purgecss end ignore */

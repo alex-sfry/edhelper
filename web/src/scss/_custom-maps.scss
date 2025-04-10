@@ -24,13 +24,13 @@ $economy-colors: (
 /* purgecss start ignore */
 @each $economy, $color in $economy-colors {
     .#{to-lower-case($economy)}-shadow {
-        box-shadow: $color 0px 50px 100px -20px, $color 0px 30px 60px -30px, $color 0px -2px 6px 0px inset;
+        box-shadow: $color 0px 50px 100px -20px, $color 0px 30px 60px -30px, $color 0px -2px 6px 0px inset !important;
     }
 }
 
 @each $economy, $color in $economy-colors {
     .text-#{to-lower-case($economy)} {
-        color: $color;
+        color: $color !important;
     }
 }
 
