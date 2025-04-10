@@ -5,11 +5,10 @@ use yii\bootstrap5\Html;
 /** @var yii\web\View $this */
 /** @var string $economy */
 /** @var string $slug */
-/** @var app\models\SupplyDemand $e_models */
-/** @var app\models\SupplyDemand $d_models */
+/** @var array $e_models */
+/** @var array $d_models */
 
 $this->title = $economy;
-// d($e_models);
 ?>
 <div class="container-xxl my-3">
     <div class="row mt-3 justify-content-center justify-content-lg-between">
