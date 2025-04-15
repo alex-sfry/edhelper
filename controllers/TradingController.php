@@ -15,9 +15,10 @@ class TradingController extends Controller
     public function actionIndex()
     {
         $model = new SupplyDemand();
-        $query = $model->find()->select(['economy_id'])->distinct()->with('economy');
+        $models = $model->find()->select(['economy_id'])->distinct()->with('economy')->all();
+        asort($models);
 
-        return $this->render('index', ['models' => $query->all()]);
+        return $this->render('index', ['models' => $models]);
     }
 
     /**
@@ -34,6 +35,8 @@ class TradingController extends Controller
         }
 
         $economies_model = $model->find()->distinct()->select(['economy_id'])->with('economy')->asArray()->all();
+        asort($economies_model);
+
         $economy_id = Economies::findOne(['slug' => $slug]);
 
         $export_q = $model->find()
