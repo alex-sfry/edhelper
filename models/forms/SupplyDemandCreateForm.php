@@ -3,6 +3,7 @@
 namespace app\models\forms;
 
 use app\models\Economies;
+use app\models\SupplyDemand;
 use yii\base\Model;
 use yii\helpers\ArrayHelper;
 
@@ -23,6 +24,12 @@ class SupplyDemandCreateForm extends Model
     public function rules()
     {
         return [
+            [
+                'commodity',
+                'exist',
+                'targetClass' => SupplyDemand::class,
+                'targetAttribute' => ['commodity' => 'commodity']
+            ],
             [['economy_ids', 'commodity', 'import_export'], 'required'],
             ['economy_ids', 'each', 'rule' => ['integer']],
             [['commodity', 'import_export'], 'string'],

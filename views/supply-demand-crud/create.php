@@ -6,13 +6,15 @@ use yii\helpers\Html;
 /** @var app\models\SupplyDemand $model */
 
 $this->title = 'Create Supply Demand';
-// $this->params['breadcrumbs'][] = ['label' => 'Supply Demands', 'url' => ['index']];
-// $this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = ['label' => 'Supply Demands', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="supply-demand-create">
-    <?php if ($status) : ?>
+    <?php if (!empty($exiting_ids)) : ?>
         <div class="text-center mt-1">
-            <span class=" bg-light text-danger fw-bold fs-5 p-1"><?= $status ?></span>
+            <?php foreach ($exiting_ids as $item) : ?>
+                <p class=" bg-light text-danger fw-bold fs-5 p-1"><?= "id $item already exists" ?></p>
+            <?php endforeach; ?>
         </div>
     <?php endif; ?>
     <h1 class="text-light text-center mt-3"><?= Html::encode($this->title) ?></h1>

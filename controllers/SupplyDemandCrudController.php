@@ -6,7 +6,6 @@ use app\models\forms\SupplyDemandCreateForm;
 use app\models\SupplyDemand;
 use app\models\search\SupplyDemandSearch;
 use Yii;
-use yii\db\IntegrityException;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -71,32 +70,37 @@ class SupplyDemandCrudController extends Controller
     public function actionCreate()
     {
         $form_model = new SupplyDemandCreateForm();
-        $status = null;
+        $existing_ids = [];
 
         if ($this->request->isPost) {
             if ($form_model->load($this->request->post()) && $form_model->validate()) {
                 $post = $this->request->post('SupplyDemandCreateForm');
 
                 foreach ($post['economy_ids'] as $item) {
+                    $exist = SupplyDemand::findOne(['commodity' => $post['commodity'], 'economy_id' => $item]);
+
+                    if ($exist) {
+                        array_push($existing_ids, $exist->getPrimaryKey());
+                        continue;
+                    }
+
                     $model = new SupplyDemand();
                     $model->setAttributes([
-                        'commodity' => ucfirst($post['commodity']),
+                        'commodity' => $post['commodity'],
                         'economy_id' => (int)$item,
-                        'import_export' => $post['import_export']
+                        'import_export' =>  $post['import_export']
                     ]);
 
-                    try {
-                        $model->save();
-                    } catch (IntegrityException $e) {
-                        $status = $e->getCode() === '23000' ? 'Record already exists.' : null;
-                    }
+                    $model->save();
                 }
+
+                empty($existing_ids) && $this->redirect(['supply-demand-crud/index']);
             }
         }
 
         return $this->render('create', [
             'model' => $form_model,
-            'status' => $status
+            'exiting_ids' => $existing_ids
         ]);
     }
 
