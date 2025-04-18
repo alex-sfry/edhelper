@@ -66,7 +66,15 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <main class="flex-shrink-0 flex-grow-1 bg-main">
         <div class="container-xxl">
             <?php if (!empty($this->params['breadcrumbs'])) : ?>
-                <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
+                <div class="d-inline-block bg-light px-1 mt-1">
+                    <?= Breadcrumbs::widget([
+                        'links' => $this->params['breadcrumbs'],
+                        'options' => [
+                            'style' => '--bs-breadcrumb-margin-bottom: 0',
+                            'class' => 'fw-bold'
+                        ]
+                    ]) ?>
+                </div>
             <?php endif ?>
             <?= Alert::widget() ?>
             <?= $content ?>
