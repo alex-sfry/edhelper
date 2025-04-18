@@ -75,7 +75,7 @@ function acCfg(cat, inpId) {
             $(`#${inpId}`).val(ui.item.value);
             event.preventDefault();
         },
-        search: function (event, ui) { 
+        search: function (event, ui) {
             $('.spinner').removeClass('visually-hidden');
         },
         response: function (event, ui) {
@@ -84,6 +84,23 @@ function acCfg(cat, inpId) {
     }
 }
 // end of custom jQuery Autocomplete widget
+
+$('#btn-mean-prices').on('click', function () {
+    const obj = { cmd: [] };
+    for (let i = 0; i < $('.c-exp-name').length; i++) {
+        obj.cmd.push($('.c-exp-name').eq(i).text().trim())
+    }
+
+    $.get('http://5.35.100.223/markets/mean', obj, function (data) {
+        // console.log(data);
+        data.forEach(function (item) {
+            const cName = item.name.toLowerCase();
+            $(`td[data-name="${cName}"] > span`).text(`(${item.mean_price.toLocaleString('uk')} cr)`);
+        })
+
+        $('#btn-mean-prices').attr('disabled', true);
+    })
+})
 
 
 
