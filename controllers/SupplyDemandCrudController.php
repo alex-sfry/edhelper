@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Economies;
 use app\models\forms\SupplyDemandCreateForm;
 use app\models\SupplyDemand;
 use app\models\search\SupplyDemandSearch;
@@ -9,6 +10,7 @@ use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
 
 /**
  * SupplyDemandCrudController implements the CRUD actions for SupplyDemand model.
@@ -42,10 +44,12 @@ class SupplyDemandCrudController extends Controller
     {
         $searchModel = new SupplyDemandSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $economies = ArrayHelper::map($this->economies(), 'economy_name', 'economy_name');
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'economies' => $economies
         ]);
     }
 
@@ -119,8 +123,11 @@ class SupplyDemandCrudController extends Controller
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
+        $economies = ArrayHelper::map($this->economies(), 'id', 'economy_name');
+
         return $this->render('update', [
             'model' => $model,
+            'economies' => $economies
         ]);
     }
 
@@ -152,5 +159,17 @@ class SupplyDemandCrudController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    /**
+     * @return array
+     */
+    protected function economies()
+    {
+        return Economies::find()
+            ->select(['id', 'economy_name'])
+            ->where(['not in', 'id', [16, 17, 18]])
+            ->asArray()
+            ->all();
     }
 }

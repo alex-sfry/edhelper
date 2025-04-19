@@ -16,9 +16,14 @@ use yii\bootstrap5\ActiveForm;
                 ->field($model, 'commodity', ['labelOptions' => [ 'class' => 'form-label fw-bold']])
                 ->textInput() ?>
 
+            <?php /* echo $form
+                ->field($model, 'economy_id', ['labelOptions' => [ 'class' => 'form-label fw-bold']])
+                ->textInput() */ ?>
+
             <?= $form
                 ->field($model, 'economy_id', ['labelOptions' => [ 'class' => 'form-label fw-bold']])
-                ->textInput() ?>
+                ->label('Economy')
+                ->dropDownList($economies) ?>
 
             <?= $form
                 ->field($model, 'import_export', ['labelOptions' => [ 'class' => 'form-label fw-bold']])

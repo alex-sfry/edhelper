@@ -11,6 +11,12 @@ use app\models\SupplyDemand;
  */
 class SupplyDemandSearch extends SupplyDemand
 {
+    public function attributes()
+    {
+        // add related fields to searchable attributes
+        return array_merge(parent::attributes(), ['economy.economy_name']);
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -18,7 +24,7 @@ class SupplyDemandSearch extends SupplyDemand
     {
         return [
             [['id', 'economy_id'], 'integer'],
-            [['commodity', 'import_export'], 'safe'],
+            [['commodity', 'import_export', 'economy.economy_name'], 'safe'],
         ];
     }
 
@@ -41,7 +47,7 @@ class SupplyDemandSearch extends SupplyDemand
      */
     public function search($params, $formName = null)
     {
-        $query = SupplyDemand::find();
+        $query = SupplyDemand::find()->joinWith('economy');
 
         // add conditions that should always apply here
 
@@ -65,6 +71,14 @@ class SupplyDemandSearch extends SupplyDemand
 
         $query->andFilterWhere(['like', 'commodity', $this->commodity])
             ->andFilterWhere(['like', 'import_export', $this->import_export]);
+
+        // add filtering by Economy relation
+        $query->andFilterWhere(['LIKE', 'economy_name', $this->getAttribute('economy.economy_name')]);
+
+        $dataProvider->sort->attributes['economy.economy_name'] = [
+            'asc' => ['economy_name' => SORT_ASC],
+            'desc' => ['economy_name' => SORT_DESC]
+        ];
 
         return $dataProvider;
     }

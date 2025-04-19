@@ -32,6 +32,11 @@ $this->title = 'Supply Demands';
             'id',
             'commodity',
             'economy_id',
+            [
+                'attribute' => 'economy.economy_name',
+                'filter' => $economies,
+                'filterInputOptions' => ['class' => 'form-select']
+            ],
             'import_export',
             [
                 'class' => ActionColumn::class,
@@ -42,6 +47,4 @@ $this->title = 'Supply Demands';
         ],
     ]); ?>
     <?php  ?>
-
-
 </div>
