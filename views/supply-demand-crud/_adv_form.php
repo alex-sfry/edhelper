@@ -23,7 +23,7 @@ use yii\bootstrap5\ActiveForm;
 
             <?= $form
                 ->field($model, 'import_export', ['labelOptions' => [ 'class' => 'form-label fw-bold']])
-                ->textInput() ?>
+                ->dropDownList(['import' => 'import', 'export' => 'export']) ?>
 
             <div class="form-group">
                 <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
