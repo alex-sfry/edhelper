@@ -7,10 +7,12 @@ use app\models\forms\SupplyDemandCreateForm;
 use app\models\SupplyDemand;
 use app\models\search\SupplyDemandSearch;
 use Yii;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
+use yii\web\UnauthorizedHttpException;
 
 /**
  * SupplyDemandCrudController implements the CRUD actions for SupplyDemand model.
@@ -29,6 +31,21 @@ class SupplyDemandCrudController extends Controller
                     'class' => VerbFilter::class,
                     'actions' => [
                         'delete' => ['POST'],
+                    ],
+                ],
+                'access' => [
+                    'class' => AccessControl::class,
+                    'rules' => [
+                        [
+                            'allow' => true,
+                            'matchCallback' => function ($rule, $action) {
+                                if (!Yii::$app->user->isGuest && Yii::$app->user->id == 1) {
+                                    return true;
+                                }
+
+                                throw new UnauthorizedHttpException();
+                            }
+                        ],
                     ],
                 ],
             ]
