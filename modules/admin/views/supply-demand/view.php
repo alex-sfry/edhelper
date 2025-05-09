@@ -31,7 +31,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'commodity',
-            'economy_id',
             'economy.economy_name',
             'import_export',
         ],

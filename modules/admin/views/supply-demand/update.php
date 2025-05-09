@@ -4,6 +4,7 @@ use yii\helpers\Html;
 
 /** @var yii\web\View $this */
 /** @var app\models\SupplyDemand $model */
+/** @var array $economies */
 
 $this->title = 'Update Supply Demand: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Supply Demands', 'url' => ['index']];
@@ -15,7 +16,7 @@ $this->params['breadcrumbs'][] = 'Update';
     <h1 class="text-light text-center mt-3"><?= Html::encode($this->title) ?></h1>
 
     <?= $this->render('_form', [
-        'model' => $model,
+        'form_model' => $model,
         'economies' => $economies
     ]) ?>
 

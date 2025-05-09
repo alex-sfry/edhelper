@@ -40,6 +40,13 @@ class SupplyDemand extends \yii\db\ActiveRecord
                 'skipOnError' => true,
                 'targetClass' => Economies::class, 'targetAttribute' => ['economy_id' => 'id']
             ],
+            [
+                ['commodity', 'economy_id', 'import_export'],
+                'unique',
+                'targetAttribute' => ['commodity', 'economy_id', 'import_export'],
+                'skipOnError' => true,
+                'message' => 'The combination of Commodity-Economy-Import/Export has already been taken.'
+            ],
         ];
     }
 

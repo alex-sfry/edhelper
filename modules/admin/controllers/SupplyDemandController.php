@@ -1,11 +1,11 @@
 <?php
 
-namespace app\controllers;
+namespace app\modules\admin\controllers;
 
 use app\models\Economies;
-use app\models\forms\SupplyDemandCreateForm;
+use app\models\forms\SupplyDemandForm;
+use app\models\SupplyDemandSearch;
 use app\models\SupplyDemand;
-use app\models\search\SupplyDemandSearch;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -15,9 +15,9 @@ use yii\helpers\ArrayHelper;
 use yii\web\UnauthorizedHttpException;
 
 /**
- * SupplyDemandCrudController implements the CRUD actions for SupplyDemand model.
+ * SupplyDemandController implements the CRUD actions for SupplyDemand model.
  */
-class SupplyDemandCrudController extends Controller
+class SupplyDemandController extends Controller
 {
     /**
      * @inheritDoc
@@ -90,38 +90,33 @@ class SupplyDemandCrudController extends Controller
      */
     public function actionCreate()
     {
-        $form_model = new SupplyDemandCreateForm();
-        $existing_ids = [];
+        $form_model = new SupplyDemandForm();
+        $model = new SupplyDemand();
+        $economies = Economies::find()->economiesList();
 
-        if ($this->request->isPost) {
-            if ($form_model->load($this->request->post()) && $form_model->validate()) {
-                $post = $this->request->post('SupplyDemandCreateForm');
+        if ($form_model->load($this->request->post()) && $form_model->validate()) {
+            // d($this->request->post(), false);
+            // d($form_model);
 
-                foreach ($post['economy_ids'] as $item) {
-                    $exist = SupplyDemand::findOne(['commodity' => $post['commodity'], 'economy_id' => $item]);
-
-                    if ($exist) {
-                        array_push($existing_ids, $exist->getPrimaryKey());
-                        continue;
-                    }
-
-                    $model = new SupplyDemand();
-                    $model->setAttributes([
-                        'commodity' => $post['commodity'],
-                        'economy_id' => (int)$item,
-                        'import_export' =>  $post['import_export']
-                    ]);
-
-                    $model->save();
-                }
-
-                empty($existing_ids) && $this->redirect(['supply-demand-crud/index']);
+            foreach ($form_model->eco_ids as $item) {
+                $model->load($this->request->post('SupplyDemandForm'), '');
+                $model->economy_id = $item;
+                $model->validate() && $model->save(false);
             }
+
+            return $this->redirect('create', [
+                'form_model' => $form_model,
+                'model' => $model,
+                'economies' => $economies,
+                'success' => true
+            ]);
         }
 
         return $this->render('create', [
-            'model' => $form_model,
-            'exiting_ids' => $existing_ids
+            'form_model' => $form_model,
+            'model' => $model,
+            'economies' => $economies,
+            'success' => null
         ]);
     }
 
@@ -136,11 +131,11 @@ class SupplyDemandCrudController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
+        if ($model->load($this->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
-        $economies = ArrayHelper::map($this->economies(), 'id', 'economy_name');
+        $economies = Economies::find()->economiesList();
 
         return $this->render('update', [
             'model' => $model,
@@ -176,17 +171,5 @@ class SupplyDemandCrudController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
-    }
-
-    /**
-     * @return array
-     */
-    protected function economies()
-    {
-        return Economies::find()
-            ->select(['id', 'economy_name'])
-            ->where(['not in', 'id', [16, 17, 18]])
-            ->asArray()
-            ->all();
     }
 }

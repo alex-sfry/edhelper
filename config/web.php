@@ -6,13 +6,18 @@ $components = require __DIR__ . '/components.php';
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log', 'app\components\AppBootstrap'],
+    'bootstrap' => ['log', 'app\components\AppBootstrap', 'app\modules\admin\ModuleBootstrap'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => $components,
     'params' => $params,
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
+    ],
 ];
 
 if (YII_ENV_DEV) {

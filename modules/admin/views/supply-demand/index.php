@@ -7,7 +7,7 @@ use yii\grid\ActionColumn;
 use yii\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var app\models\search\SupplyDemandSearch $searchModel */
+/** @var app\models\SupplyDemandSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
 $this->title = 'Supply Demands';
@@ -17,7 +17,7 @@ $this->title = 'Supply Demands';
     <h1 class="text-light"><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Supply Demand', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Supply Demand', ['supply-demand/create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

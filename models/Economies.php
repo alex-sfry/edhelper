@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "economies".
@@ -86,5 +87,14 @@ class Economies extends \yii\db\ActiveRecord
     public function getSystems()
     {
         return $this->hasMany(Systems::class, ['economy_id' => 'id']);
+    }
+
+    /**
+     * {@inheritdoc}
+     * @return EconomiesQuery the active query used by this AR class.
+     */
+    public static function find()
+    {
+        return new EconomiesQuery(get_called_class());
     }
 }
