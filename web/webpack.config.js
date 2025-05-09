@@ -9,11 +9,11 @@ export default {
     mode: 'production',
     entry: {
         main: './src/js/main.js',
-        'yii.activeForm': '../vendor/yiisoft/yii2/assets/yii.activeForm.js',
-        'yii.captcha': '../vendor/yiisoft/yii2/assets/yii.captcha.js',
-        'yii.gridView': '../vendor/yiisoft/yii2/assets/yii.gridView.js',
-        'yii': '../vendor/yiisoft/yii2/assets/yii.js',
-        'yii.validation': '../vendor/yiisoft/yii2/assets/yii.validation.js',
+        // 'yii.activeForm': '../vendor/yiisoft/yii2/assets/yii.activeForm.js',
+        // 'yii.captcha': '../vendor/yiisoft/yii2/assets/yii.captcha.js',
+        // 'yii.gridView': '../vendor/yiisoft/yii2/assets/yii.gridView.js',
+        // 'yii': '../vendor/yiisoft/yii2/assets/yii.js',
+        // 'yii.validation': '../vendor/yiisoft/yii2/assets/yii.validation.js',
         // bootstrap: './src/script/bootstrapJS/bootstrap.js'
     },
     output: {

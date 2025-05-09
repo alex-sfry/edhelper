@@ -36,45 +36,5 @@ return [
                 'position' => View::POS_HEAD
             ]
         ],
-        'yii\web\YiiAsset' => [
-            'sourcePath' => YII_ENV_DEV ? '@yii/assets' : 'dist/js',
-            'js' => [YII_ENV_DEV ? 'yii.js' : 'yii.js'],
-            'jsOptions' => [
-                'defer' => '',
-                'position' => View::POS_BEGIN
-            ]
-        ],
-        'yii\grid\GridViewAsset' => [
-            'sourcePath' => YII_ENV_DEV ? '@yii/assets' : 'dist/js',
-            'js' => [YII_ENV_DEV ? 'yii.gridView.js' : 'yii.gridView.js'],
-            'jsOptions' => [
-                'defer' => '',
-                'position' => View::POS_BEGIN
-            ]
-        ],
-        'yii\captcha\CaptchaAsset' => [
-            'sourcePath' => YII_ENV_DEV ? '@yii/assets' : 'dist/js',
-            'js' => [YII_ENV_DEV ? 'yii.captcha.js' : 'yii.captcha.js'],
-            'jsOptions' => [
-                'defer' => '',
-                'position' => View::POS_BEGIN
-            ]
-        ],
-        'yii\widgets\ActiveFormAsset' => [
-            'sourcePath' => YII_ENV_DEV ? '@yii/assets' : 'dist/js',
-            'js' => [YII_ENV_DEV ? 'yii.activeForm.js' : 'yii.activeForm.js'],
-            'jsOptions' => [
-                'defer' => '',
-                'position' => View::POS_BEGIN
-            ]
-        ],
-        'yii\validators\ValidationAsset' => [
-            'sourcePath' => YII_ENV_DEV ? '@yii/assets' : 'dist/js',
-            'js' => [YII_ENV_DEV ? 'yii.validation.js' : 'yii.validation.js'],
-            'jsOptions' => [
-                'defer' => '',
-                'position' => View::POS_BEGIN
-            ]
-        ],
     ],
 ];
