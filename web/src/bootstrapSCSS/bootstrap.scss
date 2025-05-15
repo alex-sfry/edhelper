@@ -14,13 +14,11 @@ $enable-reduced-motion: false;
 // $form-check-input-checked-bg-color: $info;
 
 $custom-colors: (
-    // "light": $gray-300,
-    "lightgray": $gray-400,
     "orange": $orange
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
-// $theme-colors: map-remove($theme-colors, "warning", "secondary");
+$theme-colors: map-remove($theme-colors, "warning", "info");
 
 $custom-fonts: (
     7: $font-size-base * 0.875,
