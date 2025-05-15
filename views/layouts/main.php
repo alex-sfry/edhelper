@@ -33,46 +33,44 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?php $this->beginBody() ?>
     <header class="edh-header">
         <?php
+        $linkOptions = ['class' => 'nav-link fs-5 fw-bold ms-lg-1'];
         NavBar::begin([
-            'brandLabel' => 'EDH',
-            'options' => ['class' => 'navbar navbar-expand-lg bg-layout'],
+            'brandLabel' => \Yii::$app->name,
             'brandOptions' => ['class' => 'text-orange fs-2 fw-bold'],
             'togglerOptions' => ['class' => 'text-primary bg-orange'],
+            'options' => ['class' => 'navbar navbar-expand-lg bg-layout nav-underline'],
         ]);
         echo Nav::widget([
             'items' => [
-                // [
-                //     'label' => 'Home',
-                //     'url' => ['site/index'],
-                //     'linkOptions' => ['class' => 'nav-link fs-5 fw-bold']
-                // ],
                 [
                     'label' => 'Economies',
                     'url' => ['economies/index'],
+                    'active' => \Yii::$app->controller->id === 'economies',
                     'linkOptions' => ['class' => 'nav-link fs-5 fw-bold']
                 ],
                 [
                     'label' => 'Trading',
                     'url' => ['trading/index'],
-                    'linkOptions' => ['class' => 'nav-link fs-5 fw-bold ms-lg-1']
+                    'active' => \Yii::$app->controller->id === 'trading',
+                    'linkOptions' => $linkOptions
                 ],
                 [
                     'label' => 'Engineers',
                     'url' => ['engineers/index'],
-                    'linkOptions' => ['class' => 'nav-link fs-5 fw-bold ms-lg-1']
+                    'linkOptions' => $linkOptions
                 ],
                 [
                     'label' => 'Material traders',
                     'url' => ['material-traders/index'],
-                    'linkOptions' => ['class' => 'nav-link fs-5 fw-bold ms-lg-1']
+                    'linkOptions' => $linkOptions
                 ],
                 [
                     'label' => 'Stations',
                     'url' => ['stations/index'],
-                    'linkOptions' => ['class' => 'nav-link fs-5 fw-bold ms-lg-1']
+                    'linkOptions' => $linkOptions
                 ],
             ],
-            'options' => ['class' => 'navbar-nav m-auto text-center'],
+            'options' => ['class' => 'navbar-nav m-auto text-center']
         ]);
         NavBar::end();
         ?>
@@ -84,8 +82,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                     <?= Breadcrumbs::widget([
                         'links' => $this->params['breadcrumbs'],
                         'options' => [
-                            'style' => '--bs-breadcrumb-margin-bottom: 0',
-                            'class' => 'fw-bold'
+                        'style' => '--bs-breadcrumb-margin-bottom: 0',
+                        'class' => 'fw-bold'
                         ]
                     ]) ?>
                 </div>

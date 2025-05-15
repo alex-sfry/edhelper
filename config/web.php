@@ -4,7 +4,8 @@ $params = require __DIR__ . '/params.php';
 $components = require __DIR__ . '/components.php';
 
 $config = [
-    'id' => 'basic',
+    'id' => 'edh',
+    'name' => 'EDH',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log', 'app\components\AppBootstrap', 'app\modules\admin\ModuleBootstrap'],
     'aliases' => [
