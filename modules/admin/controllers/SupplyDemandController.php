@@ -61,7 +61,7 @@ class SupplyDemandController extends Controller
     {
         $searchModel = new SupplyDemandSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
-        $economies = ArrayHelper::map($this->economies(), 'economy_name', 'economy_name');
+        $economies = Economies::find()->economiesList();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
