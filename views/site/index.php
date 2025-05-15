@@ -6,7 +6,8 @@ use yii\bootstrap5\Html;
 
 $this->title = 'Elite Dangerous Helper';
 ?>
-<div class="row flex-column align-content-center px-2 mt-5">
+<h1 class="text-light text-center my-3"><?= e($this->title) ?></h1>
+<div class="row flex-column align-content-center px-2">
     <div class="col-lg-4 col-sm-6 p-2">
         <?= Html::a('economies', ['economies/index'], [
             'class' => 'btn btn-success w-100 text-center py-3 fw-bold text-nowrap text-uppercase'
