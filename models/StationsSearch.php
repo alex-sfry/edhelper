@@ -43,7 +43,14 @@ class StationsSearch extends Stations
             ['refSystem', 'default', 'value' => 'Sol'],
             ['inclSurface', 'default', 'value' => 'No'],
             [['distance_to_arrival'], 'integer'],
-            [['minPadSize', 'inclSurface', 'economyId1', 'refSystem'], 'string']
+            [['minPadSize', 'inclSurface', 'economyId1', 'refSystem'], 'string'],
+            [
+                'refSystem',
+                'exist',
+                'targetClass' => Systems::class,
+                'targetAttribute' => ['refSystem' => 'name'],
+                'message' => "System doesn't exist"
+            ],
         ];
     }
 

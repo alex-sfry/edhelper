@@ -36,6 +36,13 @@ class MaterialTradersSearch extends MaterialTraders
         return [
             ['refSystem', 'default', 'value' => 'Sol'],
             [['refSystem', 'materialType'], 'string'],
+            [
+                'refSystem',
+                'exist',
+                'targetClass' => Systems::class,
+                'targetAttribute' => ['refSystem' => 'name'],
+                'message' => "System doesn't exist"
+            ],
         ];
     }
 

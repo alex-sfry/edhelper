@@ -41,20 +41,20 @@ AutocompleteAsset::register($this);
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <div class="ui-front ui-widget">
-                                <div class="d-flex align-items-end">
+                                <div class="d-flex align-items-center">
                                     <?= $form
                                         ->field(
                                             $searchModel,
                                             'refSystem',
                                             [
-                                                'options' => ['class' => 'mb-3 w-100'],
+                                                'options' => ['id' => 'cnt-refSystem', 'class' => 'mb-3 w-100'],
                                                 'labelOptions' => ['class' => 'form-label']
                                             ]
                                         )
                                         ->textInput([
                                             'autocomplete' => 'off'
                                         ]) ?>
-                                    <div class="spinner spinner-border spinner-border-sm visually-hidden"
+                                    <div class="spinner spinner-border spinner-border-sm mt-4 visually-hidden"
                                         role="status">
                                     </div>
                                 </div>

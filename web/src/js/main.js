@@ -57,15 +57,17 @@ if ($.ui) {
         }
     });
 
-    $("#materialtraderssearch-refsystem").bsAutocomplete(acCfg('system', 'materialtraderssearch-refsystem'));
-    $("#stationssearch-refsystem").bsAutocomplete(acCfg('system', 'materialtraderssearch-refsystem'));
+    $("#materialtraderssearch-refsystem")
+        .bsAutocomplete(acCfg('cnt-refSystem', '/search/?cat=system', 'materialtraderssearch-refsystem'));
+    $("#stationssearch-refsystem")
+        .bsAutocomplete(acCfg('cnt-refSystem', '/search/?cat=system', 'stationssearch-refsystem'));
 }
 
-function acCfg(cat, inpId) {
+function acCfg(cntId, endpoint, inpId) {
     return {
-        source: `/search/?cat=${cat}`,
+        source: endpoint /* `/search/?cat=${cat}` */,
         minLength: 3,
-        delay: 1000,
+        delay: 500,
         focus: function (event, ui) {
             this.value = ui.item.label; // or $('#autocomplete-input').val(ui.item.label);
             event.preventDefault(); // Prevent the default focus behavior.
@@ -76,10 +78,15 @@ function acCfg(cat, inpId) {
             event.preventDefault();
         },
         search: function (event, ui) {
+             $(`#${cntId} [data-notfound]`).remove();
             $('.spinner').removeClass('visually-hidden');
         },
         response: function (event, ui) {
             $('.spinner').addClass('visually-hidden');
+
+            if (!ui.content.length) {
+                $(`#${cntId}`).append('<div class="text-danger fw-bold mt-1" data-notfound>Found nothing</div>');
+            }
         }
     }
 }

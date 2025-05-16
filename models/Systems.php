@@ -26,7 +26,7 @@ class Systems extends \yii\db\ActiveRecord
 {
     /** @var mixed */
     public $value;
-    
+
     /**
      * {@inheritdoc}
      */
