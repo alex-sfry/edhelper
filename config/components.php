@@ -7,7 +7,7 @@ return [
     'assetManager' => $assetManager,
     'request' => [
         // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-        'cookieValidationKey' => CSFR_VALIDATION_KEY,
+        'cookieValidationKey' => COOKIE_VALIDATION_KEY,
     ],
     'cache' => [
         'class' => 'yii\caching\FileCache',
